@@ -766,6 +766,18 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                        'depth'  => 262144,
                                                        'color'  => 1
                                                        ),
+                                    'N506IS' => array(
+                                                      'width'  => 240,
+                                                      'height' => 295,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'SO506I' => array(
+                                                      'width'  => 240,
+                                                      'height' => 256,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
                                     'D253I' => array(
                                                      'width'  => 176,
                                                      'height' => 198,
@@ -790,6 +802,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                      'depth'  => 262144,
                                                      'color'  => 1
                                                      ),
+                                    'P253IS' => array(
+                                                      'width'  => 132,
+                                                      'height' => 144,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
                                     'P213I' => array(
                                                      'width'  => 132,
                                                      'height' => 144,
@@ -881,6 +899,48 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                       'width'  => 230,
                                                       'height' => 240,
                                                       'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'N901IC' => array(
+                                                      'width'  => 240,
+                                                      'height' => 270,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
+                                    'D901I' => array(
+                                                      'width'  => 230,
+                                                      'height' => 240,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'P901I' => array(
+                                                      'width'  => 240,
+                                                      'height' => 270,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
+                                    'F700I' => array(
+                                                      'width'  => 230,
+                                                      'height' => 240,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'SH700I' => array(
+                                                      'width'  => 240,
+                                                      'height' => 252,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'N700I' => array(
+                                                      'width'  => 240,
+                                                      'height' => 270,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
+                                    'P700I' => array(
+                                                      'width'  => 240,
+                                                      'height' => 270,
+                                                      'depth'  => 65536,
                                                       'color'  => 1
                                                       )
                                     );
