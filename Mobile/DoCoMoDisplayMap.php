@@ -43,11 +43,8 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
      */
     function get($model)
     {
-        $display_map =
-            &PEAR::getStaticProperty('Net_UserAgent_Mobile_DoCoMoDisplayMap',
-                                     'display_map'
-                                     );
-        if ($display_map === null) {
+        static $display_map;
+        if (!isset($display_map)) {
             $display_map = array(
 
                                  // i-mode compliant HTML 1.0
@@ -561,6 +558,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'depth'  => 65536,
                                                    'color'  => true
                                                    ),
+                                 'N2102V' => array(
+                                                   'width'  => 176,
+                                                   'height' => 198,
+                                                   'depth'  => 65536,
+                                                   'color'  => true
+                                                   ),
                                  'N2701' => array(
                                                   'width'  => 176,
                                                   'height' => 198,
@@ -597,6 +600,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'width'  => 240,
                                                   'height' => 268,
                                                   'depth'  => 262144,
+                                                  'color'  => true
+                                                  ),
+                                 'P505i' => array(
+                                                  'width'  => 240,
+                                                  'height' => 266,
+                                                  'depth'  => 65536,
                                                   'color'  => true
                                                   )
                                  );
