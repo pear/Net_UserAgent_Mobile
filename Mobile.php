@@ -174,9 +174,7 @@ class Net_UserAgent_Mobile
      */
     function isError($value)
     {
-        return is_object($value)
-            && (strtolower(get_class($value)) == 'net_useragent_mobile_error'
-                || is_subclass_of($value, 'net_useragent_mobile_error'));
+        return is_a($value, 'Net_UserAgent_Mobile_Error');
     }
 
     // }}}
