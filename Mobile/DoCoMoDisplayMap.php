@@ -50,9 +50,7 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
         if ($display_map === null) {
             $display_map = array(
 
-                                 /**
-                                  * i-mode compliant HTML 1.0
-                                  */
+                                 // i-mode compliant HTML 1.0
                                  'D501i' => array(
                                                   'width'  => 96,
                                                   'height' => 72,
@@ -78,9 +76,7 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'color'  => false
                                                   ),
 
-                                 /**
-                                  * i-mode compliant HTML 2.0
-                                  */
+                                 // i-mode compliant HTML 2.0
                                  'D502i' => array(
                                                   'width'  => 96,
                                                   'height' => 90,
@@ -238,9 +234,7 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'color'  => true
                                                    ),
 
-                                 /**
-                                  * i-mode compliant HTML 3.0
-                                  */
+                                 // i-mode compliant HTML 3.0
                                  'F503i' => array(
                                                   'width'  => 120,
                                                   'height' => 130,
@@ -380,10 +374,8 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'color'  => true
                                                   ),
 
-                                 /**
-                                  * i-mode compliant HTML 3.0
-                                  * (FOMA 2001/2002/2101V)
-                                  */
+                                 // i-mode compliant HTML 3.0
+                                 // (FOMA 2001/2002/2101V)
                                  'N2001' => array(
                                                   'width'  => 118,
                                                   'height' => 128,
@@ -427,9 +419,7 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'color'  => true
                                                    ),
 
-                                 /**
-                                  * i-mode compliant HTML 4.0
-                                  */
+                                 // i-mode compliant HTML 4.0
                                  'D504i' => array(
                                                   'width'  => 132,
                                                   'height' => 144,
@@ -539,10 +529,8 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'color'  => true
                                                   ),
 
-                                 /**
-                                  * i-mode compliant HTML 4.0
-                                  * (FOMA 2051/2102V)
-                                  */
+                                 // i-mode compliant HTML 4.0
+                                 // (FOMA 2051/2102V)
                                  'F2051' => array(
                                                   'width'  => 176,
                                                   'height' => 182,
