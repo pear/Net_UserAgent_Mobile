@@ -226,6 +226,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                      'depth'  => 4,
                                                      'color'  => 0
                                                      ),
+                                    'P651PS' => array(
+                                                      'width'  => 96,
+                                                      'height' => 87,
+                                                      'depth'  => 4,
+                                                      'color'  => 0
+                                                      ),
                                     'R691I' => array(
                                                      'width'  => 96,
                                                      'height' => 72,
@@ -563,6 +569,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                      'depth'  => 65536,
                                                      'color'  => 1
                                                      ),
+                                    'SO213I' => array(
+                                                      'width'  => 120,
+                                                      'height' => 112,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
 
                                     // i-mode compliant HTML 4.0
                                     // (FOMA 2051/2102V/2701)
@@ -724,9 +736,33 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                      'depth'  => 262144,
                                                      'color'  => 1
                                                      ),
+                                    'N506I' => array(
+                                                     'width'  => 240,
+                                                     'height' => 295,
+                                                     'depth'  => 262144,
+                                                     'color'  => 1
+                                                     ),
+                                    'P506IC' => array(
+                                                      'width'  => 240,
+                                                      'height' => 266,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
+                                    'SH506IC' => array(
+                                                       'width'  => 240,
+                                                       'height' => 252,
+                                                       'depth'  => 262144,
+                                                       'color'  => 1
+                                                       ),
+                                    'SO506IC' => array(
+                                                       'width'  => 240,
+                                                       'height' => 256,
+                                                       'depth'  => 262144,
+                                                       'color'  => 1
+                                                       ),
 
                                     // i-mode compliant HTML 5.0
-                                    // (FOMA 900i)
+                                    // (FOMA 900i etc.)
                                     'F900I' => array(
                                                      'width'  => 230,
                                                      'height' => 240,
@@ -750,7 +786,43 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                       'height' => 252,
                                                       'depth'  => 262144,
                                                       'color'  => 1
-                                                      )
+                                                      ),
+                                    'F900IT' => array(
+                                                      'width'  => 230,
+                                                      'height' => 240,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'P900IV' => array(
+                                                      'width'  => 240,
+                                                      'height' => 266,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'N900IS' => array(
+                                                      'width'  => 240,
+                                                      'height' => 269,
+                                                      'depth'  => 65536,
+                                                      'color'  => 1
+                                                      ),
+                                    'D900I' => array(
+                                                     'width'  => 240,
+                                                     'height' => 270,
+                                                     'depth'  => 262144,
+                                                     'color'  => 1
+                                                     ),
+                                    'F900IC' => array(
+                                                      'width'  => 230,
+                                                      'height' => 240,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'F880IES' => array(
+                                                       'width'  => 240,
+                                                       'height' => 256,
+                                                       'depth'  => 65536,
+                                                       'color'  => 1
+                                                       )
                                     );
             }
         }
