@@ -79,7 +79,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
      * @var string
      * @access private
      */
-    var $_comment = NULL;
+    var $_comment = null;
 
     /**
      * whether it's XHTML compliant or not
@@ -197,7 +197,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
     // {{{ getComment()
 
     /**
-     * returns comment like 'Google WAP Proxy/1.0'. returns NULL if nothinng.
+     * returns comment like 'Google WAP Proxy/1.0'. returns null if nothinng.
      *
      * @return boolean
      * @access public

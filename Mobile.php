@@ -93,12 +93,12 @@ class Net_UserAgent_Mobile
      * @see Net_UserAgent_Mobile_Request::factory()
      * @see PEAR::getStaticProperty()
      */
-    function &factory($stuff = NULL)
+    function &factory($stuff = null)
     {
         $mobile_regex = &PEAR::getStaticProperty('Net_UserAgent_Mobile',
                                                  'mobile_regex'
                                                  );
-        if ($mobile_regex === NULL) {
+        if ($mobile_regex === null) {
             $docomo_regex = '^DoCoMo/\d\.\d[ /]';
             $jphone_regex = '^J-PHONE/\d\.\d';
             $ezweb_regex  = '^(?:KDDI-[A-Z]+\d+ )?UP\.Browser\/';
