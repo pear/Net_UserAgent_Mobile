@@ -49,8 +49,8 @@ define('NET_USERAGENT_MOBILE_ERROR_NOT_FOUND', -3);
  * // or $agent = &Net_UserAgent_Mobile::factory(); // to get from $_SERVER
  *
  * if ($agent->isDoCoMo()) {
- *     // or if ($agent->getName() === 'DoCoMo')
- *     // or if (get_class($agent) === 'http_mobileagent_docomo')
+ *     // or if ($agent->getName() == 'DoCoMo')
+ *     // or if (strtolower(get_class($agent)) == 'http_mobileagent_docomo')
  *     // it's NTT DoCoMo i-mode
  *     // see what's available in Net_UserAgent_Mobile_DoCoMo
  * } elseif ($agent->isJPhone()) {
@@ -175,7 +175,7 @@ class Net_UserAgent_Mobile
     function isError($value)
     {
         return is_object($value)
-            && (get_class($value) == 'net_useragent_mobile_error'
+            && (strtolower(get_class($value)) == 'net_useragent_mobile_error'
                 || is_subclass_of($value, 'net_useragent_mobile_error'));
     }
 
