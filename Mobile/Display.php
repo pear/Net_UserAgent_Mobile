@@ -45,6 +45,13 @@
  * $height_bytes = $display->getHeightBytes();
  * </code>
  *
+ * USING EXTERNAL MAP FILE:
+ * If the environment variable DOCOMO_MAP exists, the specified XML data will
+ * be used for DoCoMo display information.
+ *
+ * ex) Please add the following code.
+ * $_SERVER['DOCOMO_MAP'] = '/path/to/DoCoMoMap.xml';
+ *
  * @package  Net_UserAgent_Mobile
  * @category Networking
  * @author   KUBO Atsuhiro <kubo@isite.co.jp>
