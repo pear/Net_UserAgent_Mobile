@@ -233,7 +233,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
                                       '[DFNP]501i' => '1.0',
                                       '502i|821i|209i|691i|(F|N|P|KO)210i|^F671i$' => '2.0',
                                       '(D210i|SO210i)|503i|211i|SH251i|692i|200[12]|2101V' => '3.0',
-                                      '504i|251i|^F671iS$|212i|2051|2102V|661i|2701' => '4.0',
+                                      '504i|251i|^F671iS$|212i|2051|2102V|^F661i$|2701|^F672i$' => '4.0',
                                       'eggy|P751v' => '3.2',
                                       '505i' => '5.0'
                                       );
@@ -433,6 +433,9 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
     {
         @list($this->name, $this->version, $this->_model, $cache, $rest) =
             explode('/', $main, 5);
+        if ($this->_model === 'SH505i2') {
+            $this->_model = 'SH505i';
+        }
 
         if ($cache) {
             if (!preg_match('/^c(\d+)/', $cache, $matches)) {
