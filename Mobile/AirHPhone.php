@@ -222,6 +222,32 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
         return $this->_cache_size;
     }
 
+    // }}}
+    // {{{ getCarrierShortName()
+
+    /**
+     * returns the short name of the carrier
+     *
+     * @return string
+     */
+    function getCarrierShortName()
+    {
+        return 'H';
+    }
+
+    // }}}
+    // {{{ getCarrierLongName()
+
+    /**
+     * returns the long name of the carrier
+     *
+     * @return string
+     */
+    function getCarrierLongName()
+    {
+        return 'AirH';
+    }
+
     /**#@-*/
 }
 
