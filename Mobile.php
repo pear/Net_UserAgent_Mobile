@@ -53,9 +53,9 @@ define('NET_USERAGENT_MOBILE_ERROR_NOT_FOUND', -3);
  *     // or if (strtolower(get_class($agent)) == 'http_mobileagent_docomo')
  *     // it's NTT DoCoMo i-mode
  *     // see what's available in Net_UserAgent_Mobile_DoCoMo
- * } elseif ($agent->isJPhone()) {
- *     // it's J-PHONE J-Sky
- *     // see what's available in Net_UserAgent_Mobile_JPhone
+ * } elseif ($agent->isVodafone()) {
+ *     // it's Vodafone(J-PHONE)
+ *     // see what's available in Net_UserAgent_Mobile_Vodafone
  * } elseif ($agent->isEZweb()) {
  *     // it's KDDI/EZWeb
  *     // see what's available in Net_UserAgent_Mobile_EZweb
