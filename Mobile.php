@@ -156,7 +156,6 @@ class Net_UserAgent_Mobile
      {
          static $instance;
          if (!isset($instance)) {
-             print "created a new one\n";
              $instance = Net_UserAgent_Mobile::factory($stuff);
          }
 
