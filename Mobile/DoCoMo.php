@@ -30,7 +30,7 @@
 // printf("Model: %s\n", $agent->getModel()); // 'P502i'
 // printf("Cache: %dk\n", $agent->getCacheSize()); // 10
 // if ($agent->isFOMA()) {
-//     print "FOMA\n";             // FALSE
+//     print "FOMA\n";             // false
 // }
 // printf("Vendor: %s\n", $agent->getVendor()); // 'P'
 // printf("Series: %s\n", $agent->getSeries()); // '502i'
@@ -109,7 +109,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      * @var boolean
      * @access private
      */
-    var $_is_foma = FALSE;
+    var $_is_foma = false;
 
     /**
      * FOMA Card ID (20 digit alphanumeric)
@@ -136,14 +136,14 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
     // {{{ isDoCoMo()
 
     /**
-     * returns TRUE
+     * returns true
      *
      * @return boolean
      * @access public
      */
     function isDoCoMo()
     {
-        return TRUE;
+        return true;
     }
 
     // }}}
@@ -169,7 +169,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         } elseif ($foma_or_comment) {
 
             // DoCoMo/2.0 N2001(c10;ser0123456789abcde;icc01234567890123456789)
-            $this->_is_foma = TRUE;
+            $this->_is_foma = true;
             list($this->name, $this->version) = explode('/', $main);
             $this->_parseFOMA($foma_or_comment);
         } else {

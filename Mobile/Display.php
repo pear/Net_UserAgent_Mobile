@@ -167,7 +167,7 @@ class Net_UserAgent_Mobile_Display
     // {{{ isColor()
 
     /**
-     * returns TRUE if the display has color capability
+     * returns true if the display has color capability
      *
      * @return boolean
      * @access public

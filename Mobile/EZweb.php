@@ -34,7 +34,7 @@
 //
 // e.g.) 'KDDI-TS21 UP.Browser/6.0.2.276 (GUI) MMP/1.1'
 // if ($agent->isXHTMLCompliant()) {
-//     print "XHTML compliant!\n"; // TRUE
+//     print "XHTML compliant!\n"; // true
 // }
 //
 
@@ -86,20 +86,20 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
      * @var boolean
      * @access private
      */
-    var $_xhtml_compliant = FALSE;
+    var $_xhtml_compliant = false;
 
     // }}}
     // {{{ isEZweb()
 
     /**
-     * returns TRUE
+     * returns true
      *
      * @return boolean
      * @access public
      */
     function isEZweb()
     {
-        return TRUE;
+        return true;
     }
 
     // }}}
@@ -117,7 +117,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
         if (preg_match('/^KDDI-(.*)/', $agent, $matches)) {
 
             // KDDI-TS21 UP.Browser/6.0.2.276 (GUI) MMP/1.1
-            $this->_xhtml_compliant = TRUE;
+            $this->_xhtml_compliant = true;
             list($this->_device_id, $browser, $opt, $this->_server_name) =
                 explode(' ', $matches[1], 4);
             list($this->name, $version) = explode('/', $browser);
@@ -155,7 +155,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
             explode(',', $this->getHeader('x-up-devcap-screendepth'));
         $depth = $screen_depth[0];
         $color =
-            $this->getHeader('x-up-devcap-iscolor') === '1' ? TRUE : FALSE;
+            $this->getHeader('x-up-devcap-iscolor') === '1' ? true : false;
         return new Net_UserAgent_Mobile_Display(array(
                                                       'width'  => $width,
                                                       'height' => $height,
