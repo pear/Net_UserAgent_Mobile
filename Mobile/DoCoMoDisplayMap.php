@@ -556,7 +556,13 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'height' => 270,
                                                   'depth'  => 262144,
                                                   'color'  => true
-                                                  )
+                                                  ),
+                                 'SO505i' => array(
+                                                   'width'  => 256,
+                                                   'height' => 240,
+                                                   'depth'  => 262144,
+                                                   'color'  => true
+                                                   )
                                  );
         }
 
