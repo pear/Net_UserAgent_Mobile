@@ -120,7 +120,8 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
             $this->_xhtml_compliant = TRUE;
             list($this->_device_id, $browser, $opt, $this->_server_name) =
                 explode(' ', $matches[1], 4);
-            list($this->name, $this->version) = explode('/', $browser);
+            list($this->name, $version) = explode('/', $browser);
+            $this->version = "$version $opt";
         } else {
 
             // UP.Browser/3.01-HI01 UP.Link/3.4.5.2
