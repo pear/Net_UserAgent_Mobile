@@ -500,7 +500,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
                     $this->_serial_number = $matches[1];
                     continue;
                 }
-                if (preg_match('/^(T[DBJ])$/', $value, $matches)) {
+                if (preg_match('/^(T[CDBJ])$/', $value, $matches)) {
                     $this->_status = $matches[1];
                     continue;
                 }
