@@ -404,6 +404,24 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         return $this->_card_id;
     }
 
+    // }}}
+    // {{{ isGPS()
+
+    /**
+     * @return boolean
+     */ 
+    function isGPS()
+    {
+        $gps_models = &PEAR::getStaticProperty('Net_UserAgent_Mobile_DoCoMo',
+                                               'gps_models'
+                                               );
+        if ($gps_models === null) {
+            $gps_models = array('F661i');
+        }
+
+        return in_array($this->_model, $gps_models);
+    }
+
     /**#@-*/
 
     /**#@+
