@@ -39,6 +39,10 @@
  * if ($display->isColor()) {
  *     $depth = $display->getDepth();
  * }
+ *
+ * // only available in DoCoMo 505i
+ * $width_bytes  = $display->getWidthBytes();
+ * $height_bytes = $display->getHeightBytes();
  * </code>
  *
  * @package  Net_UserAgent_Mobile
@@ -80,6 +84,18 @@ class Net_UserAgent_Mobile_Display
      */
     var $_color;
 
+    /**
+     * width (bytes) of the display
+     * @var integer
+     */
+    var $_width_bytes;
+
+    /**
+     * height (bytes) of the display
+     * @var integer
+     */
+    var $_height_bytes;
+
     /**#@-*/
 
     // }}}
@@ -96,6 +112,9 @@ class Net_UserAgent_Mobile_Display
         $this->_height = (integer)@$data['height'];
         $this->_depth  = (integer)@$data['depth'];
         $this->_color  = (boolean)@$data['color'];
+
+        $this->_width_bytes  = (integer)@$data['width_bytes'];
+        $this->_height_bytes = (integer)@$data['height_bytes'];
     }
 
     /**#@+
@@ -178,6 +197,32 @@ class Net_UserAgent_Mobile_Display
     function isColor()
     {
         return $this->_color;
+    }
+
+    // }}}
+    // {{{ getWidthBytes()
+
+    /**
+     * returns width (bytes) of the display
+     *
+     * @return integer
+     */
+    function getWidthBytes()
+    {
+        return $this->_width_bytes;
+    }
+
+    // }}}
+    // {{{ getHeightBytes()
+
+    /**
+     * returns height (bytes) of the display
+     *
+     * @return integer
+     */
+    function getHeightBytes()
+    {
+        return $this->_height_bytes;
     }
 
     /**#@-*/
