@@ -324,12 +324,24 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                  'depth'  => 4096,
                                                  'color'  => true
                                                  ),
+                                'N211iS' => array(
+                                                  'width'  => 118,
+                                                  'height' => 128,
+                                                  'depth'  => 4096,
+                                                  'color'  => true
+                                                  ),
                                 'P211i' => array(
                                                  'width'  => 120,
                                                  'height' => 130,
                                                  'depth'  => 65536,
                                                  'color'  => true
                                                  ),
+                                'P211iS' => array(
+                                                  'width'  => 120,
+                                                  'height' => 130,
+                                                  'depth'  => 65536,
+                                                  'color'  => true
+                                                  ),
                                 'SO211i' => array(
                                                   'width'  => 120,
                                                   'height' => 112,
