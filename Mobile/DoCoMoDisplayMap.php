@@ -525,6 +525,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'depth'  => 65536,
                                                   'color'  => true
                                                   ),
+                                 'F672i' => array(
+                                                  'width'  => 160,
+                                                  'height' => 120,
+                                                  'depth'  => 65536,
+                                                  'color'  => true
+                                                  ),
 
                                  // i-mode compliant HTML 4.0
                                  // (FOMA 2051/2102V/2701)
