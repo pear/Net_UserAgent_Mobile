@@ -20,6 +20,7 @@
 //
 
 require_once(dirname(__FILE__) . '/Common.php');
+require_once(dirname(__FILE__) . '/Display.php');
 
 /**
  * Non-Mobile Agent implementation
@@ -73,6 +74,21 @@ class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
     {
         @list($this->name, $this->version) =
             explode('/', $this->getUserAgent());
+    }
+
+    // }}}
+    // {{{ makeDisplay()
+
+    /**
+     * create a new {@link Net_UserAgent_Mobile_Display} class instance
+     *
+     * @return object a newly created {@link Net_UserAgent_Mobile_Display}
+     *     object
+     * @see Net_UserAgent_Mobile_Display
+     */
+    function makeDisplay()
+    {
+        return new Net_UserAgent_Mobile_Display(null);
     }
 
     // }}}
