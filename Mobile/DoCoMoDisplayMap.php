@@ -548,7 +548,15 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'height' => 198,
                                                    'depth'  => 262144,
                                                    'color'  => true
-                                                   )
+                                                   ),
+
+                                 // i-mode compliant HTML 5.0 (505i etc.)
+                                 'D505i' => array(
+                                                  'width'  => 240,
+                                                  'height' => 270,
+                                                  'depth'  => 262144,
+                                                  'color'  => true
+                                                  )
                                  );
         }
 
