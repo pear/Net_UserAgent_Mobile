@@ -19,9 +19,9 @@
 // $Id$
 //
 
-require_once('Net/UserAgent/Mobile/Common.php');
-require_once('Net/UserAgent/Mobile/Display.php');
-require_once('Net/UserAgent/Mobile/DoCoMoDisplayMap.php');
+require_once(dirname(__FILE__) . '/Common.php');
+require_once(dirname(__FILE__) . '/Display.php');
+require_once(dirname(__FILE__) . '/DoCoMoDisplayMap.php');
 
 /**
  * NTT DoCoMo implementation

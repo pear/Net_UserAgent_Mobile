@@ -20,7 +20,7 @@
 //
 
 require_once('PEAR.php');
-require_once('Net/UserAgent/Mobile/Request.php');
+require_once(dirname(__FILE__) . '/Mobile/Request.php');
 
 /**
  * constants for error handling
@@ -123,7 +123,7 @@ class Net_UserAgent_Mobile
                  (@$matches[3] ? 'EZweb' : 'AirHPhone'));
         }
         $class_name = "Net_UserAgent_Mobile_{$sub}";
-        $include    = "Net/UserAgent/Mobile/{$sub}.php";
+        $include    = dirname(__FILE__) . "/Mobile/{$sub}.php";
         @include_once($include);
 
         if (!class_exists($class_name)) {

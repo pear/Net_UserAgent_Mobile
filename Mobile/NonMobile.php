@@ -19,7 +19,7 @@
 // $Id$
 //
 
-require_once('Net/UserAgent/Mobile/Common.php');
+require_once(dirname(__FILE__) . '/Common.php');
 
 /**
  * Non-Mobile Agent implementation
