@@ -265,6 +265,20 @@ class Net_UserAgent_Mobile_Common
     {
         return $this->isEZweb() && $this->isXHTMLCompliant();
     }
+
+    // }}}
+    // {{{ isNonMobile()
+
+    /**
+     * returns TRUE if the agent is NonMobile
+     *
+     * @return boolean
+     * @access public
+     */
+    function isNonMobile()
+    {
+        return FALSE;
+    }
 }
 
 /*

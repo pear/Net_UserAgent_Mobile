@@ -43,6 +43,20 @@ class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
 {
 
     // }}}
+    // {{{ isNonMobile()
+
+    /**
+     * returns TRUE
+     *
+     * @return boolean
+     * @access public
+     */
+    function isNonMobile()
+    {
+        return TRUE;
+    }
+
+    // }}}
     // {{{ parse()
 
     /**
