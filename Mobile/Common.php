@@ -71,6 +71,13 @@ class Net_UserAgent_Mobile_Common extends PEAR
      */
     var $_request;
 
+    /**
+     * {@link Net_UserAgent_Mobile_Error} object for error handling in the
+     *     constructor
+     * @var object
+     **/
+    var $_error = null;
+
     /**#@-*/
 
     // }}}
@@ -87,13 +94,32 @@ class Net_UserAgent_Mobile_Common extends PEAR
         parent::PEAR('Net_UserAgent_Mobile_Error');
         $this->_request = $request;
         if (Net_UserAgent_Mobile::isError($result = $this->parse())) {
-            $this = $result;
+            $this->isError($result);
         }
     }
 
     /**#@+
      * @access public
      */
+
+    // }}}
+    // {{{ isError
+
+    /**
+     * Returns/set an error when the instance couldn't initialize properly
+     *
+     * @param object {@link Net_UserAgent_Mobile_Error} object when setting
+     *     an error
+     * @return object {@link Net_UserAgent_Mobile_Error} object
+     */
+    function &isError($error = null)
+    {
+        if ($error !== null) {
+            $this->_error = &$error;
+        }
+
+        return $this->_error;
+    }
 
     // }}}
     // {{{ raiseError()
