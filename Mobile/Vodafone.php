@@ -114,6 +114,12 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
      */
     var $_is3G = true;
 
+    /**
+     * the name of the mobile phone
+     * @var string
+     */
+    var $_msname = '';
+
     /**#@-*/
 
     /**#@+
@@ -181,6 +187,9 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
         if (Net_UserAgent_Mobile::isError($result)) {
             return $result;
         }
+
+
+        $this->_msname = $this->getHeader('x-jphone-msname');
     }
 
     // }}}
@@ -385,6 +394,19 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
     function isType3GC()
     {
         return $this->_is3G;
+    }
+
+    // }}}
+    // {{{ getMsname()
+
+    /**
+     * returns the name of the mobile phone
+     *
+     * @return string the name of the mobile phone
+     */
+    function getMsname()
+    {
+        return $this->_msname;
     }
 
     /**#@-*/
