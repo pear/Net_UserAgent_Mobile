@@ -105,11 +105,11 @@ class Net_UserAgent_Mobile
         static $mobileRegex;
         if (!isset($mobileRegex)) {
             $docomoRegex    = '^DoCoMo/\d\.\d[ /]';
-            $jphoneRegex    = '^J-PHONE/\d\.\d';
+            $vodafoneRegex  = '^(?:(?:Vodafone|J-PHONE)/\d\.\d|MOT-)';
             $ezwebRegex     = '^(?:KDDI-[A-Z]+\d+ )?UP\.Browser\/';
             $airhphoneRegex = '^Mozilla/3\.0\(DDIPOCKET;';
             $mobileRegex =
-                "(?:($docomoRegex)|($jphoneRegex)|($ezwebRegex)|($airhphoneRegex))";
+                "(?:($docomoRegex)|($vodafoneRegex)|($ezwebRegex)|($airhphoneRegex))";
         }
 
         $request = &Net_UserAgent_Mobile_Request::factory($stuff);
