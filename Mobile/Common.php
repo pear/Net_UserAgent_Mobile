@@ -300,6 +300,19 @@ class Net_UserAgent_Mobile_Common extends PEAR
     }
 
     // }}}
+    // {{{ isVodafone()
+
+    /**
+     * returns true if the agent is Vodafone
+     *
+     * @return boolean
+     */
+    function isVodafone()
+    {
+        return false;
+    }
+
+    // }}}
     // {{{ isEZweb()
 
     /**
@@ -321,6 +334,32 @@ class Net_UserAgent_Mobile_Common extends PEAR
      * @return boolean
      */
     function isAirHPhone()
+    {
+        return false;
+    }
+
+    // }}}
+    // {{{ isNonMobile()
+
+    /**
+     * returns true if the agent is NonMobile
+     *
+     * @return boolean
+     */
+    function isNonMobile()
+    {
+        return false;
+    }
+
+    // }}}
+    // {{{ isTUKa()
+
+    /**
+     * returns true if the agent is TU-Ka
+     *
+     * @return boolean
+     */
+    function isTUKa()
     {
         return false;
     }
@@ -352,16 +391,29 @@ class Net_UserAgent_Mobile_Common extends PEAR
     }
 
     // }}}
-    // {{{ isNonMobile()
+    // {{{ getCarrierShortName()
 
     /**
-     * returns true if the agent is NonMobile
+     * returns the short name of the carrier
      *
-     * @return boolean
+     * @abstract
      */
-    function isNonMobile()
+    function getCarrierShortName()
     {
-        return false;
+        die();
+    }
+
+    // }}}
+    // {{{ getCarrierLongName()
+
+    /**
+     * returns the long name of the carrier
+     *
+     * @abstract
+     */
+    function getCarrierLongName()
+    {
+        die();
     }
 
     /**#@-*/
