@@ -549,6 +549,18 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'depth'  => 262144,
                                                    'color'  => true
                                                    ),
+                                 'P2102V' => array(
+                                                   'width'  => 176,
+                                                   'height' => 198,
+                                                   'depth'  => 262144,
+                                                   'color'  => true
+                                                   ),
+                                 'F2102V' => array(
+                                                   'width'  => 176,
+                                                   'height' => 182,
+                                                   'depth'  => 65536,
+                                                   'color'  => true
+                                                   ),
                                  'N2701' => array(
                                                   'width'  => 176,
                                                   'height' => 198,
@@ -578,6 +590,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                  'N505i' => array(
                                                   'width'  => 240,
                                                   'height' => 270,
+                                                  'depth'  => 262144,
+                                                  'color'  => true
+                                                  ),
+                                 'F505i' => array(
+                                                  'width'  => 240,
+                                                  'height' => 268,
                                                   'depth'  => 262144,
                                                   'color'  => true
                                                   )
