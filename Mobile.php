@@ -106,11 +106,12 @@ class Net_UserAgent_Mobile
                                                  'mobile_regex'
                                                  );
         if ($mobile_regex === null) {
-            $docomo_regex = '^DoCoMo/\d\.\d[ /]';
-            $jphone_regex = '^J-PHONE/\d\.\d';
-            $ezweb_regex  = '^(?:KDDI-[A-Z]+\d+ )?UP\.Browser\/';
+            $docomo_regex    = '^DoCoMo/\d\.\d[ /]';
+            $jphone_regex    = '^J-PHONE/\d\.\d';
+            $ezweb_regex     = '^(?:KDDI-[A-Z]+\d+ )?UP\.Browser\/';
+            $airhphone_regex = '^Mozilla/3\.0\(DDIPOCKET;';
             $mobile_regex =
-                "(?:($docomo_regex)|($jphone_regex)|($ezweb_regex))";
+                "(?:($docomo_regex)|($jphone_regex)|($ezweb_regex)|($airhphone_regex))";
         }
 
         $request = &Net_UserAgent_Mobile_Request::factory($stuff);
@@ -120,7 +121,8 @@ class Net_UserAgent_Mobile
         $sub = 'NonMobile';
         if (preg_match("!$mobile_regex!", $ua, $matches)) {
             $sub = @$matches[1] ? 'DoCoMo' :
-                (@$matches[2] ? 'JPhone' : 'EZweb');
+                (@$matches[2] ? 'JPhone' :
+                 (@$matches[3] ? 'EZweb' : 'AirHPhone'));
         }
         $class_name = "Net_UserAgent_Mobile_{$sub}";
         $include    = "Net/UserAgent/Mobile/{$sub}.php";
@@ -135,7 +137,8 @@ class Net_UserAgent_Mobile
                                     );
         }
 
-        @$instance = &new $class_name($request);
+        $instance = &new $class_name($request);
+        //        @$instance = &new $class_name($request);
         return $instance;
     }
 
