@@ -682,7 +682,25 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'height' => 240,
                                                   'depth'  => 262144,
                                                   'color'  => true
-                                                  )
+                                                  ),
+                                 'N900i' => array(
+                                                  'width'  => 240,
+                                                  'height' => 269,
+                                                  'depth'  => 65536,
+                                                  'color'  => true
+                                                  ),
+                                 'P900i' => array(
+                                                  'width'  => 240,
+                                                  'height' => 266,
+                                                  'depth'  => 65536,
+                                                  'color'  => true
+                                                  ),
+                                 'SH900i' => array(
+                                                   'width'  => 240,
+                                                   'height' => 252,
+                                                   'depth'  => 262144,
+                                                   'color'  => true
+                                                   )
                                  );
         }
 
