@@ -207,14 +207,12 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      */
     function makeDisplay()
     {
-        if ($this->_display_bytes === '') {
-            $display = Net_UserAgent_Mobile_DoCoMoDisplayMap::get($this->_model);
-        } else {
+        $display = Net_UserAgent_Mobile_DoCoMoDisplayMap::get($this->_model);
+        if ($this->_display_bytes !== '') {
             list($width_bytes, $height_bytes) =
                 explode('*', $this->_display_bytes);
-            $display = array('width_bytes'  => $width_bytes,
-                             'height_bytes' => $height_bytes
-                             );
+            $display['width_bytes']  = $width_bytes;
+            $display['height_bytes'] = $height_bytes;
         }
         return new Net_UserAgent_Mobile_Display($display);
     }
