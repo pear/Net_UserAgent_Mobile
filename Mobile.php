@@ -140,6 +140,30 @@ class Net_UserAgent_Mobile
     }
 
     // }}}
+    // {{{ singleton()
+
+    /**
+     * creates a new {@link Net_UserAgent_Mobile_Common} subclass instance or
+     * returns a instance from existent ones
+     *
+     * @param mixed $stuff User-Agent string or object that works with
+     *     HTTP_Request (not implemented)
+     * @return mixed a newly created or a existent Net_UserAgent_Mobile
+     *     object, or a PEAR error object on error
+     * @see Net_UserAgent_Mobile::factory()
+     */
+     function &singleton($stuff = null)
+     {
+         static $instance;
+         if (!isset($instance)) {
+             print "created a new one\n";
+             $instance = Net_UserAgent_Mobile::factory($stuff);
+         }
+
+         return $instance;
+     }
+
+    // }}}
     // {{{ isError()
 
     /**
