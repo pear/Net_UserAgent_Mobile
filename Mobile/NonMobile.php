@@ -75,6 +75,58 @@ class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
             explode('/', $this->getUserAgent());
     }
 
+    // }}}
+    // {{{ getModel()
+
+    /**
+     * returns name of the model
+     *
+     * @return string
+     */
+    function getModel()
+    {
+        return '';
+    }
+
+    // }}}
+    // {{{ getDeviceID()
+
+    /**
+     * returns device ID
+     *
+     * @return string
+     */
+    function getDeviceID()
+    {
+        return '';
+    }
+
+    // }}}
+    // {{{ getCarrierShortName()
+
+    /**
+     * returns the short name of the carrier
+     *
+     * @return string
+     */
+    function getCarrierShortName()
+    {
+        return 'N';
+    }
+
+    // }}}
+    // {{{ getCarrierLongName()
+
+    /**
+     * returns the long name of the carrier
+     *
+     * @return string
+     */
+    function getCarrierLongName()
+    {
+        return 'NonMobile';
+    }
+
     /**#@-*/
 }
 
