@@ -137,8 +137,7 @@ class Net_UserAgent_Mobile
                                     );
         }
 
-        $instance = &new $class_name($request);
-        //        @$instance = &new $class_name($request);
+        @$instance = &new $class_name($request);
         return $instance;
     }
 
