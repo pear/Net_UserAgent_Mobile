@@ -143,6 +143,21 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
     }
 
     // }}}
+    // {{{ makeDisplay()
+
+    /**
+     * create a new {@link Net_UserAgent_Mobile_Display} class instance
+     *
+     * @return object a newly created {@link Net_UserAgent_Mobile_Display}
+     *     object
+     * @see Net_UserAgent_Mobile_Display
+     */
+    function makeDisplay()
+    {
+        return new Net_UserAgent_Mobile_Display(null);
+    }
+
+    // }}}
     // {{{ getVendor()
 
     /**
