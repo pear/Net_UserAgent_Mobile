@@ -160,7 +160,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
             explode(',', $this->getHeader('x-up-devcap-screenpixels'));
         $screen_depth =
             explode(',', $this->getHeader('x-up-devcap-screendepth'));
-        $depth = $screen_depth[0] ? pow(2, $screen_depth[0]) : 0;
+        $depth = $screen_depth[0] ? pow(2, (integer)$screen_depth[0]) : 0;
         $color =
             $this->getHeader('x-up-devcap-iscolor') === '1' ? true : false;
         return new Net_UserAgent_Mobile_Display(array(
