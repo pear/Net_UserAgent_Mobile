@@ -63,7 +63,7 @@ class Net_UserAgent_Mobile_Common extends PEAR
      * {@link Net_UserAgent_Mobile_Display} object
      * @var object {@link Net_UserAgent_Mobile_Display}
      */
-    var $_display = '';
+    var $_display;
 
     /**
      * Net_UserAgent_Mobile_Request_XXX object
@@ -185,7 +185,7 @@ class Net_UserAgent_Mobile_Common extends PEAR
      */
     function getDisplay()
     {
-        if ($this->_display === '') {
+        if (!is_object($this->_display)) {
             $this->_display = $this->makeDisplay();
         }
         return $this->_display;
@@ -282,6 +282,19 @@ class Net_UserAgent_Mobile_Common extends PEAR
      * @return boolean
      */
     function isEZweb()
+    {
+        return false;
+    }
+
+    // }}}
+    // {{{ isAirHPhone()
+
+    /**
+     * returns true if the agent is AirH"PHONE
+     *
+     * @return boolean
+     */
+    function isAirHPhone()
     {
         return false;
     }
