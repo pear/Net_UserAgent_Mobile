@@ -613,7 +613,19 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'height' => 266,
                                                   'depth'  => 65536,
                                                   'color'  => true
-                                                  )
+                                                  ),
+                                 'D252i' => array(
+                                                  'width'  => 176,
+                                                  'height' => 198,
+                                                  'depth'  => 262144,
+                                                  'color'  => true
+                                                  ),
+                                 'SH252i' => array(
+                                                   'width'  => 240,
+                                                   'height' => 252,
+                                                   'depth'  => 262144,
+                                                   'color'  => true
+                                                   )
                                  );
         }
 
