@@ -95,13 +95,13 @@ class Net_UserAgent_Mobile_Display
      * width (bytes) of the display
      * @var integer
      */
-    var $_width_bytes;
+    var $_widthBytes;
 
     /**
      * height (bytes) of the display
      * @var integer
      */
-    var $_height_bytes;
+    var $_heightBytes;
 
     /**#@-*/
 
@@ -120,8 +120,8 @@ class Net_UserAgent_Mobile_Display
         $this->_depth  = (integer)@$data['depth'];
         $this->_color  = (boolean)@$data['color'];
 
-        $this->_width_bytes  = (integer)@$data['width_bytes'];
-        $this->_height_bytes = (integer)@$data['height_bytes'];
+        $this->_widthBytes  = (integer)@$data['width_bytes'];
+        $this->_heightBytes = (integer)@$data['height_bytes'];
     }
 
     /**#@+
@@ -216,7 +216,7 @@ class Net_UserAgent_Mobile_Display
      */
     function getWidthBytes()
     {
-        return $this->_width_bytes;
+        return $this->_widthBytes;
     }
 
     // }}}
@@ -229,7 +229,7 @@ class Net_UserAgent_Mobile_Display
      */
     function getHeightBytes()
     {
-        return $this->_height_bytes;
+        return $this->_heightBytes;
     }
 
     /**#@-*/

@@ -85,19 +85,19 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
      * version number of the model
      * @var string
      */
-    var $_model_version;
+    var $_modelVersion;
 
     /**
      * version number of the browser
      * @var string
      */
-    var $_browser_version;
+    var $_browserVersion;
 
     /**
      * cache size as killobytes unit
      * @var integer
      */
-    var $_cache_size;
+    var $_cacheSize;
 
     /**#@-*/
 
@@ -130,13 +130,13 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
         if (preg_match('!^Mozilla/3\.0\(DDIPOCKET;(.*)\)CNF/2\.0$!',
                        $agent, $matches)
             ) {
-            list($this->_vendor, $this->_model, $this->_model_version,
-                 $this->_browser_version, $cache) =
+            list($this->_vendor, $this->_model, $this->_modelVersion,
+                 $this->_browserVersion, $cache) =
                 explode('/', $matches[1]);
             if (!preg_match('/^c(\d+)/', $cache, $matches)) {
                 return $this->noMatch();
             }
-            $this->_cache_size = (integer)$matches[1];
+            $this->_cacheSize = (integer)$matches[1];
         } else {
             $this->noMatch();
         }
@@ -193,7 +193,7 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
      */
     function getModelVersion()
     {
-        return $this->_model_version;
+        return $this->_modelVersion;
     }
 
     // }}}
@@ -206,7 +206,7 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
      */
     function getBrowserVersion()
     {
-        return $this->_browser_version;
+        return $this->_browserVersion;
     }
 
     // }}}
@@ -219,7 +219,7 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
      */
     function getCacheSize()
     {
-        return $this->_cache_size;
+        return $this->_cacheSize;
     }
 
     // }}}
