@@ -614,6 +614,18 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                   'depth'  => 65536,
                                                   'color'  => true
                                                   ),
+                                 'D505iS' => array(
+                                                   'width'  => 240,
+                                                   'height' => 270,
+                                                   'depth'  => 262144,
+                                                   'color'  => true
+                                                   ),
+                                 'P505iS' => array(
+                                                   'width'  => 240,
+                                                   'height' => 266,
+                                                   'depth'  => 65536,
+                                                   'color'  => true
+                                                   ),
                                  'D252i' => array(
                                                   'width'  => 176,
                                                   'height' => 198,
@@ -625,7 +637,19 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'height' => 252,
                                                    'depth'  => 262144,
                                                    'color'  => true
-                                                   )
+                                                   ),
+                                 'P252i' => array(
+                                                  'width'  => 132,
+                                                  'height' => 144,
+                                                  'depth'  => 65536,
+                                                  'color'  => true
+                                                  ),
+                                 'N252i' => array(
+                                                  'width'  => 132,
+                                                  'height' => 140,
+                                                  'depth'  => 65536,
+                                                  'color'  => true
+                                                  )
                                  );
         }
 
