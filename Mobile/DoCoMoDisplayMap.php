@@ -626,6 +626,24 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                    'depth'  => 65536,
                                                    'color'  => true
                                                    ),
+                                 'N505iS' => array(
+                                                   'width'  => 240,
+                                                   'height' => 270,
+                                                   'depth'  => 262144,
+                                                   'color'  => true
+                                                  ),
+                                 'SO505iS' => array(
+                                                    'width'  => 240,
+                                                    'height' => 256,
+                                                    'depth'  => 262144,
+                                                    'color'  => true
+                                                    ),
+                                 'SH505iS' => array(
+                                                    'width'  => 240,
+                                                    'height' => 252,
+                                                    'depth'  => 262144,
+                                                    'color'  => true
+                                                    ),
                                  'D252i' => array(
                                                   'width'  => 176,
                                                   'height' => 198,
