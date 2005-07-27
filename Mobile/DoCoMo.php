@@ -423,7 +423,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
     {
         static $gpsModels;
         if (!isset($gpsModels)) {
-            $gpsModels = array('F661i');
+            $gpsModels = array('F661i', 'F505iGPS');
         }
         return in_array($this->_model, $gpsModels);
     }
