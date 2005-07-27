@@ -31,6 +31,13 @@ define('NET_USERAGENT_MOBILE_ERROR_NOMATCH',   -2);
 define('NET_USERAGENT_MOBILE_ERROR_NOT_FOUND', -3);
 
 /**
+ * globals for fallback on no match
+ * @name $_NET_USERAGENT_MOBILE_FALLBACK_ON_NOMATCH
+ * @global boolean $GLOBALS['_NET_USERAGENT_MOBILE_FALLBACK_ON_NOMATCH']
+ */
+$GLOBALS['_NET_USERAGENT_MOBILE_FALLBACK_ON_NOMATCH'] = false;
+
+/**
  * HTTP mobile user agent string parser
  *
  * Net_UserAgent_Mobile parses HTTP_USER_AGENT strings of (mainly Japanese)
@@ -147,6 +154,13 @@ class Net_UserAgent_Mobile
         $instance = &new $className($request);
         $error = &$instance->isError();
         if (Net_UserAgent_Mobile::isError($error)) {
+            if ($GLOBALS['_NET_USERAGENT_MOBILE_FALLBACK_ON_NOMATCH']
+                && $error->getCode() == NET_USERAGENT_MOBILE_ERROR_NOMATCH
+                ) {
+                $instance = &Net_UserAgent_Mobile::factory('Net_UserAgent_Mobile_Fallback_On_NoMatch');
+                return $instance;
+            }
+
             $instance = &$error;
         }
 
