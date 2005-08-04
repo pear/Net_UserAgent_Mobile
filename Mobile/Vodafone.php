@@ -495,7 +495,9 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
                 explode('/', $agent[0]);
             $this->_model  = (string)$model;
             if ($this->_model) {
-                if (preg_match('!J-([A-Z]+)!', $this->_model, $matches)) {
+                if (preg_match('!V\d+([A-Z]+)!', $this->_model, $matches)) {
+                    $this->_vendor = $matches[1];
+                } elseif (preg_match('!J-([A-Z]+)!', $this->_model, $matches)) {
                     $this->_vendor = $matches[1];
                 }
             }
