@@ -949,6 +949,18 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                       'depth'  => 65536,
                                                       'color'  => 1
                                                       ),
+                                    'F700IS' => array(
+                                                      'width'  => 230,
+                                                      'height' => 240,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'SH700IS' => array(
+                                                      'width'  => 240,
+                                                      'height' => 252,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
 
                                     'SH901IS' => array(
                                                        'width'  => 240,
