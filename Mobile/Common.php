@@ -149,14 +149,16 @@ class Net_UserAgent_Mobile_Common extends PEAR
 
         // The error is yet a Net_UserAgent_Mobile error object
         if (is_object($code)) {
-            return PEAR::raiseError($code, null, null, null, null, null,
-                                    true
-                                    );
+            $error = &PEAR::raiseError($code, null, null, null, null, null,
+                                       true
+                                       );
+            return $error;
         }
 
-        return PEAR::raiseError(null, $code, $mode, $options, $userinfo,
-                                'Net_UserAgent_Mobile_Error', true
-                                );
+        $error = &PEAR::raiseError(null, $code, $mode, $options, $userinfo,
+                                   'Net_UserAgent_Mobile_Error', true
+                                   );
+        return $error;
     }
 
     // }}}
