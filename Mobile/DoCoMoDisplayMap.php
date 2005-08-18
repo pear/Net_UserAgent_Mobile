@@ -991,6 +991,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                       'height' => 270,
                                                       'depth'  => 65536,
                                                       'color'  => 1
+                                                      ),
+                                    'SH851I' => array(
+                                                      'width'  => 240,
+                                                      'height' => 252,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
                                                       )
                                     );
             }
