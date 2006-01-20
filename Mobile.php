@@ -114,7 +114,7 @@ class Net_UserAgent_Mobile
             $docomoRegex    = '^DoCoMo/\d\.\d[ /]';
             $vodafoneRegex  = '^(?:(?:Vodafone|J-PHONE)/\d\.\d|MOT-)';
             $ezwebRegex     = '^(?:KDDI-[A-Z]+\d+[A-Z]? )?UP\.Browser\/';
-            $airhphoneRegex = '^Mozilla/3\.0\(DDIPOCKET;';
+            $airhphoneRegex = '^Mozilla/3\.0\((?:DDIPOCKET|WILLCOM);';
             $mobileRegex =
                 "(?:($docomoRegex)|($vodafoneRegex)|($ezwebRegex)|($airhphoneRegex))";
         }
