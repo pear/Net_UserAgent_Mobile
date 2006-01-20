@@ -63,7 +63,7 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
      * @var string
      * @access public
      */
-    var $name = 'DDIPOCKET';
+    var $name = 'WILLCOM';
 
     /**#@+
      * @access private
@@ -127,13 +127,13 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
     function parse()
     {
         $agent = $this->getUserAgent();
-        if (preg_match('!^Mozilla/3\.0\(DDIPOCKET;(.*)\)CNF/2\.0$!',
+        if (preg_match('!^Mozilla/3\.0\((?:DDIPOCKET|WILLCOM);(.*)\)!',
                        $agent, $matches)
             ) {
             list($this->_vendor, $this->_model, $this->_modelVersion,
                  $this->_browserVersion, $cache) =
                 explode('/', $matches[1]);
-            if (!preg_match('/^c(\d+)/', $cache, $matches)) {
+            if (!preg_match('/^[Cc](\d+)/', $cache, $matches)) {
                 return $this->noMatch();
             }
             $this->_cacheSize = (integer)$matches[1];
