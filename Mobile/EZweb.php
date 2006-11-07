@@ -12,8 +12,8 @@
  *
  * @category   Networking
  * @package    Net_UserAgent_Mobile
- * @author     KUBO Atsuhiro <kubo@isite.co.jp>
- * @copyright  2003-2006 KUBO Atsuhiro <kubo@isite.co.jp>
+ * @author     KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2003-2006 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    CVS: $Id$
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/4_4.html
@@ -57,8 +57,8 @@ require_once(dirname(__FILE__) . '/Display.php');
  *
  * @category   Networking
  * @package    Net_UserAgent_Mobile
- * @author     KUBO Atsuhiro <kubo@isite.co.jp>
- * @copyright  2003-2006 KUBO Atsuhiro <kubo@isite.co.jp>
+ * @author     KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2003-2006 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/4_4.html
