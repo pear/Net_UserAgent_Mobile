@@ -451,10 +451,10 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
             }
         }
 
-        if (!preg_match('!^([a-z]+)([a-z]\d{3})$!i', $modelVersion, $matches)
-            ) {
+        if (!preg_match('!^([a-z]+)([a-z]\d{2,3})$!i', $modelVersion, $matches)) {
             return $this->noMatch();
         }
+
         $this->_vendor = $matches[1];
         $this->_vendorVersion = $matches[2];
 
