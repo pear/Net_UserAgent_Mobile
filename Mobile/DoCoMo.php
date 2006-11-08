@@ -552,8 +552,10 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
                     $this->_status = $matches[1];
                     continue;
                 }
-                if (preg_match('/^icc(\w{20})$/', $value, $matches)) {
-                    $this->_cardID = $matches[1];
+                if (preg_match('/^icc(\w{20})?$/', $value, $matches)) {
+                    if (count($matches) == 2) {
+                        $this->_cardID = $matches[1];
+                    }
                     continue;
                 }
                 if (preg_match('/^W(\d+)H(\d+)$/', $value, $matches)) {
