@@ -443,12 +443,10 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
         @list($this->name, $this->version, $this->_model, $modelVersion,
               $serialNumber) = explode('/', $agent[0]);
         if ($serialNumber) {
-            if ($serialNumber) {
-                if (!preg_match('!^SN(.+)!', $serialNumber, $matches)) {
-                    return $this->noMatch();
-                }
-                $this->_serialNumber = $matches[1];
+            if (!preg_match('!^SN(.+)!', $serialNumber, $matches)) {
+                return $this->noMatch();
             }
+            $this->_serialNumber = $matches[1];
         }
 
         if (!preg_match('!^([a-z]+)([a-z]\d{2,3})$!i', $modelVersion, $matches)) {
