@@ -449,7 +449,7 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
             $this->_serialNumber = $matches[1];
         }
 
-        if (!preg_match('!^([a-z]+)([a-z]\d{2,3})$!i', $modelVersion, $matches)) {
+        if (!preg_match('!^([a-z]+)((?:[a-z]|\d){4})$!i', $modelVersion, $matches)) {
             return $this->noMatch();
         }
 
