@@ -19,8 +19,8 @@
 // $Id$
 //
 
-require_once(dirname(__FILE__) . '/Common.php');
-require_once(dirname(__FILE__) . '/Display.php');
+require_once 'Net/UserAgent/Mobile/Common.php';
+require_once 'Net/UserAgent/Mobile/Display.php';
 
 /**
  * AirH"PHONE implementation

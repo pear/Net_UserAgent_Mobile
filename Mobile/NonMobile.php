@@ -13,14 +13,14 @@
 // | obtain it through the world-wide-web, please send a note to          |
 // | license@php.net so we can mail you a copy immediately.               |
 // +----------------------------------------------------------------------+
-// | Authors: KUBO Atsuhiro <iteman@users.sourceforge.net>                            |
+// | Authors: KUBO Atsuhiro <iteman@users.sourceforge.net>                |
 // +----------------------------------------------------------------------+
 //
 // $Id$
 //
 
-require_once(dirname(__FILE__) . '/Common.php');
-require_once(dirname(__FILE__) . '/Display.php');
+require_once 'Net/UserAgent/Mobile/Common.php';
+require_once 'Net/UserAgent/Mobile/Display.php';
 
 /**
  * Non-Mobile Agent implementation
