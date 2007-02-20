@@ -36,7 +36,7 @@ require_once 'Net/UserAgent/Mobile/DoCoMoDisplayMap.php';
  *
  * SYNOPSIS:
  * <code>
- * require_once('Net/UserAgent/Mobile.php');
+ * require_once 'Net/UserAgent/Mobile.php';
  *
  * $_SERVER['HTTP_USER_AGENT'] = 'DoCoMo/1.0/P502i/c10';
  * $agent = &Net_UserAgent_Mobile::factory();
