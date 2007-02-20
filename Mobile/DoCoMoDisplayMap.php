@@ -1120,6 +1120,24 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                      'depth'  => 65536,
                                                      'color'  => 1
                                                      ),
+                                    'L600I' => array(
+                                                     'width'  => 176,
+                                                     'height' => 189,
+                                                     'depth'  => 65536,
+                                                     'color'  => 1
+                                                     ),
+                                    'M702IS' => array(
+                                                      'width'  => 240,
+                                                      'height' => 267,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'M702IG' => array(
+                                                      'width'  => 240,
+                                                      'height' => 267,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
 
                                     // i-mode compliant HTML 6.0
                                     // (FOMA 902i etc.)
@@ -1202,6 +1220,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                         'color'  => 1
                                                         ),
                                     'N902IX' => array(
+                                                      'width'  => 240,
+                                                      'height' => 270,
+                                                      'depth'  => 262144,
+                                                      'color'  => 1
+                                                      ),
+                                    'N902IL' => array(
                                                       'width'  => 240,
                                                       'height' => 270,
                                                       'depth'  => 262144,
@@ -1291,6 +1315,24 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                        'depth'  => 65536,
                                                        'color'  => 1
                                                        ),
+                                    'N601I' => array(
+                                                     'width'  => 240,
+                                                     'height' => 270,
+                                                     'depth'  => 65536,
+                                                     'color'  => 1
+                                                     ),
+                                    'D800IDS' => array(
+                                                       'width'  => 230,
+                                                       'height' => 240,
+                                                       'depth'  => 262144,
+                                                       'color'  => 1
+                                                       ),
+                                    'P703IMYU' => array(
+                                                        'width'  => 240,
+                                                        'height' => 270,
+                                                        'depth'  => 262144,
+                                                        'color'  => 1
+                                                        ),
 
                                     // i-mode compliant HTML 7.0
                                     // (FOMA 903i etc.)
