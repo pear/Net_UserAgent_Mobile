@@ -13,7 +13,7 @@
  * @category   Networking
  * @package    Net_UserAgent_Mobile
  * @author     KUBO Atsuhiro <iteman@users.sourceforge.net>
- * @copyright  2003-2006 KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2003-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    CVS: $Id$
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/4_4.html
@@ -36,7 +36,7 @@ require_once 'Net/UserAgent/Mobile/Display.php';
  *
  * SYNOPSIS:
  * <code>
- * require_once('Net/UserAgent/Mobile.php');
+ * require_once 'Net/UserAgent/Mobile.php';
  *
  * $_SERVER['HTTP_USER_AGENT'] = 'UP.Browser/3.01-HI02 UP.Link/3.2.1.2';
  * $agent = &Net_UserAgent_Mobile::factory();
@@ -58,7 +58,7 @@ require_once 'Net/UserAgent/Mobile/Display.php';
  * @category   Networking
  * @package    Net_UserAgent_Mobile
  * @author     KUBO Atsuhiro <iteman@users.sourceforge.net>
- * @copyright  2003-2006 KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2003-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/4_4.html
