@@ -105,10 +105,6 @@ class Net_UserAgent_Mobile_Common extends PEAR
         }
     }
 
-    /**#@+
-     * @access public
-     */
-
     // }}}
     // {{{ isError
 
