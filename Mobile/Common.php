@@ -16,7 +16,7 @@
  * @copyright  2003-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    CVS: $Id$
- * @since      Class available since Release 0.5
+ * @since      File available since Release 0.1
  */
 
 // {{{ Net_UserAgent_Mobile_Common
@@ -33,7 +33,7 @@
  * @copyright  2003-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
- * @since      Class available since Release 0.5
+ * @since      Class available since Release 0.1
  */
 class Net_UserAgent_Mobile_Common extends PEAR
 {
