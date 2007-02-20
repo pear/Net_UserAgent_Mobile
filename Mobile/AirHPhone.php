@@ -18,7 +18,7 @@
  * @version    CVS: $Id$
  * @link       http://www.willcom-inc.com/ja/service/contents_service/club_air_edge/for_phone/homepage/index.html
  * @see        Net_UserAgent_Mobile_Common
- * @since      Class available since Release 0.5
+ * @since      File available since Release 0.5
  */
 
 require_once 'Net/UserAgent/Mobile/Common.php';
