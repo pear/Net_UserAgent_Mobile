@@ -489,7 +489,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         }
 
         if ($cache) {
-            if (!preg_match('/^c(\d+)/', $cache, $matches)) {
+            if (!preg_match('/^c(\d+)$/', $cache, $matches)) {
                 return $this->noMatch();
             }
             $this->_cacheSize = (integer)$matches[1];
@@ -540,7 +540,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         if (preg_match('/^[^(]+\((.*?)\)$/', $foma, $matches)) {
             $rest = explode(';', $matches[1]);
             foreach ($rest as $value) {
-                if (preg_match('/^c(\d+)/', $value, $matches)) {
+                if (preg_match('/^c(\d+)$/', $value, $matches)) {
                     $this->_cacheSize = (integer)$matches[1];
                     continue;
                 }
