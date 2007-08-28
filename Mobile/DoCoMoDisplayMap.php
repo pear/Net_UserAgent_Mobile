@@ -822,12 +822,12 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
                                                        'depth'  => 262144,
                                                        'color'  => 1
                                                        ),
-                                    'N506ISII' => array(
-                                                        'width'  => 240,
-                                                        'height' => 295,
-                                                        'depth'  => 262144,
-                                                        'color'  => 1
-                                                        ),
+                                    'N506IS2' => array(
+                                                       'width'  => 240,
+                                                       'height' => 295,
+                                                       'depth'  => 262144,
+                                                       'color'  => 1
+                                                       ),
                                     'P506ICII' => array(
                                                         'width'  => 240,
                                                         'height' => 266,
