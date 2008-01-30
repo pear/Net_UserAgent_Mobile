@@ -13,7 +13,7 @@
  * @category   Networking
  * @package    Net_UserAgent_Mobile
  * @author     KUBO Atsuhiro <iteman@users.sourceforge.net>
- * @copyright  2003-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2003-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    CVS: $Id$
  * @since      File available since Release 0.1
@@ -88,7 +88,7 @@ $GLOBALS['_NET_USERAGENT_MOBILE_FALLBACK_ON_NOMATCH'] = false;
  * @category   Networking
  * @package    Net_UserAgent_Mobile
  * @author     KUBO Atsuhiro <iteman@users.sourceforge.net>
- * @copyright  2003-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2003-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
  * @since      Class available since Release 0.1
@@ -196,15 +196,23 @@ class Net_UserAgent_Mobile
      *     object, or a PEAR error object on error
      * @see Net_UserAgent_Mobile::factory()
      */
-     function &singleton($stuff = null)
-     {
-         static $instance;
-         if (!isset($instance)) {
-             $instance = Net_UserAgent_Mobile::factory($stuff);
-         }
+    function &singleton($stuff = null)
+    {
+        static $instances;
 
-         return $instance;
-     }
+        if (!isset($instances)) {
+            $instances = array();
+        }
+
+        $request = &Net_UserAgent_Mobile_Request::factory($stuff);
+        $ua = $request->get('User-Agent');
+
+        if (!array_key_exists($ua, $instances)) {
+            $instances[$ua] = Net_UserAgent_Mobile::factory($stuff);
+        }
+
+        return $instances[$ua];
+    }
 
     // }}}
     // {{{ isError()
