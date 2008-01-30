@@ -182,4 +182,3 @@ class Net_UserAgent_Mobile_Request_Env
  * indent-tabs-mode: nil
  * End:
  */
-?>

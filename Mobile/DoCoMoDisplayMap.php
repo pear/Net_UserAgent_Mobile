@@ -1639,4 +1639,3 @@ class Net_UserAgent_Mobile_DoCoMoDisplayMap
  * indent-tabs-mode: nil
  * End:
  */
-?>

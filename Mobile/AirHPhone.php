@@ -282,4 +282,3 @@ class Net_UserAgent_Mobile_AirHPhone extends Net_UserAgent_Mobile_Common
  * indent-tabs-mode: nil
  * End:
  */
-?>

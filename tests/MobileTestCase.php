@@ -156,4 +156,3 @@ class Net_UserAgent_MobileTestCase extends PHPUnit_Framework_TestCase
  * indent-tabs-mode: nil
  * End:
  */
-?>

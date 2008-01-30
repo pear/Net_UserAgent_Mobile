@@ -554,4 +554,3 @@ class Net_UserAgent_Mobile_Vodafone extends Net_UserAgent_Mobile_Common
  * indent-tabs-mode: nil
  * End:
  */
-?>

@@ -265,4 +265,3 @@ class Net_UserAgent_Mobile_Display
  * indent-tabs-mode: nil
  * End:
  */
-?>

@@ -444,4 +444,3 @@ class Net_UserAgent_Mobile_Common extends PEAR
  * indent-tabs-mode: nil
  * End:
  */
-?>

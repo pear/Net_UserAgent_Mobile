@@ -585,4 +585,3 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
  * indent-tabs-mode: nil
  * End:
  */
-?>

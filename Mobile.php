@@ -363,4 +363,3 @@ class Net_UserAgent_Mobile_Error extends PEAR_Error
  * indent-tabs-mode: nil
  * End:
  */
-?>

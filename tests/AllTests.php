@@ -60,4 +60,3 @@ if (PHPUnit_MAIN_METHOD == 'Net_UserAgent_Mobile_AllTests::main') {
  * indent-tabs-mode: nil
  * End:
  */
-?>
