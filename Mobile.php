@@ -150,7 +150,7 @@ class Net_UserAgent_Mobile
         $sub = 'NonMobile';
         if (preg_match("!$mobileRegex!", $ua, $matches)) {
             $sub = @$matches[1] ? 'DoCoMo' :
-                (@$matches[2] ? 'Vodafone' :
+                (@$matches[2] ? 'SoftBank' :
                  (@$matches[3] ? 'EZweb' : 'AirHPhone'));
         }
         $className = "Net_UserAgent_Mobile_{$sub}";

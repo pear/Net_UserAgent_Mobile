@@ -70,7 +70,7 @@ class Net_UserAgent_MobileTestCase extends PHPUnit_Framework_TestCase
         $this->assertType('Net_UserAgent_Mobile_EZweb',
                           Net_UserAgent_Mobile::factory('KDDI-SA31 UP.Browser/6.2.0.7.3.129 (GUI) MMP/2.0')
                           );
-        $this->assertType('Net_UserAgent_Mobile_Vodafone',
+        $this->assertType('Net_UserAgent_Mobile_SoftBank',
                           Net_UserAgent_Mobile::factory('SoftBank/1.0/706SC/SCJ001 Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1')
                           );
         $this->assertType('Net_UserAgent_Mobile_AirHPhone',
