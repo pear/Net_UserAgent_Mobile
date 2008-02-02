@@ -421,6 +421,20 @@ class Net_UserAgent_Mobile_Common extends PEAR
         die();
     }
 
+    // }}}
+    // {{{ isSoftBank()
+
+    /**
+     * Returns whether the agent is SoftBank or not.
+     *
+     * @return boolean
+     * @since Method available since Release 0.31.0
+     */
+    function isSoftBank()
+    {
+        return false;
+    }
+
     /**#@-*/
 
     /**#@+
