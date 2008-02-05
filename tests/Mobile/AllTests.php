@@ -20,18 +20,17 @@
  */
 
 if (!defined('PHPUnit_MAIN_METHOD')) {
-    define('PHPUnit_MAIN_METHOD', 'Net_UserAgent_Mobile_AllTests::main');
+    define('PHPUnit_MAIN_METHOD', 'Mobile_AllTests::main');
 }
 
 require_once 'PHPUnit/Framework/TestSuite.php';
 require_once 'PHPUnit/TextUI/TestRunner.php';
 
-chdir(dirname(__FILE__) . '/..');
+chdir(dirname(__FILE__) . '/../..');
 
-require_once dirname(__FILE__) . '/MobileTestCase.php';
-require_once dirname(__FILE__) . '/Mobile/AllTests.php';
+require_once dirname(__FILE__) . '/DoCoMoTestCase.php';
 
-class Net_UserAgent_Mobile_AllTests
+class Mobile_AllTests
 {
     public static function main()
     {
@@ -40,14 +39,13 @@ class Net_UserAgent_Mobile_AllTests
     public static function suite()
     {
         $suite = new PHPUnit_Framework_TestSuite('Net_UserAgent_Mobile package');
-        $suite->addTestSuite('Net_UserAgent_MobileTestCase');
-        $suite->addTest(Mobile_AllTests::suite());
+        $suite->addTestSuite('Net_UserAgent_Mobile_DoCoMoTestCase');
         return $suite;
     }
 }
 
-if (PHPUnit_MAIN_METHOD == 'Net_UserAgent_Mobile_AllTests::main') {
-    Net_UserAgent_Mobile_AllTests::main();
+if (PHPUnit_MAIN_METHOD == 'Mobile_AllTests::main') {
+    Mobile_AllTests::main();
 }
 
 /*
