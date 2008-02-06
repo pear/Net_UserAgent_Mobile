@@ -112,32 +112,6 @@ class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
     }
 
     // }}}
-    // {{{ getModel()
-
-    /**
-     * returns name of the model
-     *
-     * @return string
-     */
-    function getModel()
-    {
-        return '';
-    }
-
-    // }}}
-    // {{{ getDeviceID()
-
-    /**
-     * returns device ID
-     *
-     * @return string
-     */
-    function getDeviceID()
-    {
-        return '';
-    }
-
-    // }}}
     // {{{ getCarrierShortName()
 
     /**
