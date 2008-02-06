@@ -308,7 +308,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
      */
     function getCarrierShortName()
     {
-        return 'V';
+        return 'S';
     }
 
     // }}}
