@@ -87,12 +87,13 @@ class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
     // {{{ parse()
 
     /**
-     * parse HTTP_USER_AGENT string
+     * Parses HTTP_USER_AGENT string.
+     *
+     * @param string $userAgent User-Agent string
      */
-    function parse()
+    function parse($userAgent)
     {
-        @list($this->name, $this->version) =
-            explode('/', $this->getUserAgent());
+        @list($this->name, $this->version) = explode('/', $userAgent);
     }
 
     // }}}

@@ -835,7 +835,7 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
     {
         reset($this->_profiles);
         while (list($userAgent, $profile) = each($this->_profiles)) {
-            $agent = new Net_UserAgent_Mobile_DoCoMo(Net_UserAgent_Mobile_Request::factory($userAgent));
+            $agent = new Net_UserAgent_Mobile_DoCoMo($userAgent);
 
             $this->assertTrue($agent->isDoCoMo());
         }
@@ -845,7 +845,7 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
     {
         reset($this->_profiles);
         while (list($userAgent, $profile) = each($this->_profiles)) {
-            $agent = new Net_UserAgent_Mobile_DoCoMo(Net_UserAgent_Mobile_Request::factory($userAgent));
+            $agent = new Net_UserAgent_Mobile_DoCoMo($userAgent);
 
             if ($profile['model'] == 'MST_v_SH2101V') {
                 $this->assertEquals('SH2101V', $agent->getModel());

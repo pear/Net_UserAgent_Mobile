@@ -166,13 +166,14 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
     // {{{ parse()
 
     /**
-     * parse HTTP_USER_AGENT string
+     * Parses HTTP_USER_AGENT string.
      *
+     * @param string $userAgent User-Agent string
      * @return mixed void, or a PEAR error object on error
      */
-    function parse()
+    function parse($userAgent)
     {
-        $agent = explode(' ', $this->getUserAgent());
+        $agent = explode(' ', $userAgent);
         preg_match('!^(?:(SoftBank|Vodafone|J-PHONE)/\d\.\d|MOT-)!',
                    $agent[0], $matches
                    );
@@ -199,7 +200,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
             return $result;
         }
 
-        $this->_msname = $this->getHeader('x-jphone-msname');
+        $this->_msname = $this->getHeader('X-JPHONE-MSNAME');
     }
 
     // }}}
@@ -215,10 +216,10 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
     function makeDisplay() 
     {
         @list($width, $height) =
-            explode('*', $this->getHeader('x-jphone-display'));
+            explode('*', $this->getHeader('X-JPHONE-DISPLAY'));
         $color = false;
         $depth = 0;
-        if ($color_string = $this->getHeader('x-jphone-color')) {
+        if ($color_string = $this->getHeader('X-JPHONE-COLOR')) {
             preg_match('!^([CG])(\d+)$!', $color_string, $matches);
             $color = $matches[1] === 'C' ? true : false;
             $depth = $matches[2];

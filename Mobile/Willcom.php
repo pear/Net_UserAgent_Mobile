@@ -132,13 +132,14 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
     // {{{ parse()
 
     /**
-     * parse HTTP_USER_AGENT string
+     * Parses HTTP_USER_AGENT string.
+     *
+     * @param string $userAgent User-Agent string
      */
-    function parse()
+    function parse($userAgent)
     {
-        $agent = $this->getUserAgent();
         if (preg_match('!^Mozilla/3\.0\((?:DDIPOCKET|WILLCOM);(.*)\)!',
-                       $agent, $matches)
+                       $userAgent, $matches)
             ) {
             list($this->_vendor, $this->_model, $this->_modelVersion,
                  $this->_browserVersion, $cache) =

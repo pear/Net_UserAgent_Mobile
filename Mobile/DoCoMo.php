@@ -173,14 +173,14 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
     // {{{ parse()
 
     /**
-     * parse HTTP_USER_AGENT string
+     * Parses HTTP_USER_AGENT string.
      *
+     * @param string $userAgent User-Agent string
      * @return mixed void, or a PEAR error object on error
      */
-    function parse()
+    function parse($userAgent)
     {
-        @list($main, $foma_or_comment) =
-            explode(' ', $this->getUserAgent(), 2);
+        @list($main, $foma_or_comment) = explode(' ', $userAgent, 2);
 
         if ($foma_or_comment
             && preg_match('/^\((.*)\)$/', $foma_or_comment, $matches)

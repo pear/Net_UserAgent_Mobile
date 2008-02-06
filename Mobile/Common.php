@@ -69,17 +69,18 @@ class Net_UserAgent_Mobile_Common extends PEAR
     var $_display;
 
     /**
-     * Net_UserAgent_Mobile_Request_XXX object
-     * @var object {@link Net_UserAgent_Mobile_Request_Env}
-     */
-    var $_request;
-
-    /**
      * {@link Net_UserAgent_Mobile_Error} object for error handling in the
      *     constructor
      * @var object
      **/
-    var $_error = null;
+    var $_error;
+
+    /**
+     * The User-Agent string.
+     * @var string
+     * @since Property available since Release 0.31.0
+     **/
+    var $_userAgent;
 
     /**#@-*/
 
@@ -93,16 +94,18 @@ class Net_UserAgent_Mobile_Common extends PEAR
     /**
      * constructor
      *
-     * @param object $request a {@link Net_UserAgent_Mobile_Request_Env}
-     *     object
+     * @param string $userAgent User-Agent string
      */
-    function Net_UserAgent_Mobile_Common($request)
+    function Net_UserAgent_Mobile_Common($userAgent)
     {
         parent::PEAR('Net_UserAgent_Mobile_Error');
-        $this->_request = $request;
-        if (Net_UserAgent_Mobile::isError($result = $this->parse())) {
+
+        $result = $this->parse($userAgent);
+        if (Net_UserAgent_Mobile::isError($result)) {
             $this->isError($result);
         }
+
+        $this->_userAgent = $userAgent;
     }
 
     // }}}
@@ -174,7 +177,7 @@ class Net_UserAgent_Mobile_Common extends PEAR
      */
     function getUserAgent()
     {
-        return $this->getHeader('User-Agent');
+        return $this->_userAgent;
     }
 
     // }}}
@@ -188,7 +191,7 @@ class Net_UserAgent_Mobile_Common extends PEAR
      */
     function getHeader($header)
     {
-        return $this->_request->get($header);
+        return @$_SERVER[ 'HTTP_' . str_replace('-', '_', $header) ];
     }
 
     // }}}
@@ -255,14 +258,12 @@ class Net_UserAgent_Mobile_Common extends PEAR
     // {{{ parse()
 
     /**
-     * parse HTTP_USER_AGENT string (should be implemented in subclasses)
+     * Parses HTTP_USER_AGENT string.
      *
+     * @param string $userAgent User-Agent string
      * @abstract
      */
-    function parse()
-    {
-        die();
-    }
+    function parse($userAgent) {}
 
     // }}}
     // {{{ makeDisplay()
