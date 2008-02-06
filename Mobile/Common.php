@@ -435,6 +435,20 @@ class Net_UserAgent_Mobile_Common extends PEAR
         return false;
     }
 
+    // }}}
+    // {{{ isWillcom()
+
+    /**
+     * Returns whether the agent is Willcom or not.
+     *
+     * @return boolean
+     * @since Method available since Release 0.31.0
+     */
+    function isWillcom()
+    {
+        return false;
+    }
+
     /**#@-*/
 
     /**#@+
