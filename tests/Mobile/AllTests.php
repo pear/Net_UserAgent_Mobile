@@ -29,6 +29,10 @@ require_once 'PHPUnit/TextUI/TestRunner.php';
 chdir(dirname(__FILE__) . '/../..');
 
 require_once dirname(__FILE__) . '/DoCoMoTestCase.php';
+require_once dirname(__FILE__) . '/EZwebTestCase.php';
+require_once dirname(__FILE__) . '/SoftBankTestCase.php';
+require_once dirname(__FILE__) . '/WillcomTestCase.php';
+require_once dirname(__FILE__) . '/NonMobileTestCase.php';
 
 class Mobile_AllTests
 {
@@ -40,6 +44,10 @@ class Mobile_AllTests
     {
         $suite = new PHPUnit_Framework_TestSuite('Net_UserAgent_Mobile package');
         $suite->addTestSuite('Net_UserAgent_Mobile_DoCoMoTestCase');
+        $suite->addTestSuite('Net_UserAgent_Mobile_EZwebTestCase');
+        $suite->addTestSuite('Net_UserAgent_Mobile_SoftBankTestCase');
+        $suite->addTestSuite('Net_UserAgent_Mobile_WillcomTestCase');
+        $suite->addTestSuite('Net_UserAgent_Mobile_NonMobileTestCase');
         return $suite;
     }
 }
