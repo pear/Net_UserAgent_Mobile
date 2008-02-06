@@ -831,7 +831,7 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
      * @access public
      */
 
-    public function testShouldDetectUserAgentsAsDoCoMo()
+    public function testShouldDetectUserAgentsAsDocomo()
     {
         reset($this->_profiles);
         while (list($userAgent, $profile) = each($this->_profiles)) {
