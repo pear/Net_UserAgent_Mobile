@@ -838,6 +838,10 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
             $agent = new Net_UserAgent_Mobile_DoCoMo($userAgent);
 
             $this->assertTrue($agent->isDoCoMo());
+            $this->assertFalse($agent->isEZweb());
+            $this->assertFalse($agent->isSoftBank());
+            $this->assertFalse($agent->isWillcom());
+            $this->assertFalse($agent->isNonMobile());
         }
     }
 
