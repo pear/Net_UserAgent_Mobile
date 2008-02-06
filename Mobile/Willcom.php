@@ -224,7 +224,7 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
      */
     function getCarrierShortName()
     {
-        return 'H';
+        return 'W';
     }
 
     // }}}
@@ -237,7 +237,7 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
      */
     function getCarrierLongName()
     {
-        return 'AirH';
+        return 'WILLCOM';
     }
 
     // }}}
