@@ -144,7 +144,7 @@ class Net_UserAgent_Mobile
         } elseif (Net_UserAgent_Mobile::isSoftBank($userAgent)) {
             $driver = 'SoftBank';
         } elseif (Net_UserAgent_Mobile::isWillcom($userAgent)) {
-            $driver = 'AirHPhone';
+            $driver = 'Willcom';
         } else {
             $driver = 'NonMobile';
         }
