@@ -82,18 +82,6 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
      */
 
     /**
-     * name of the model like 'P502i'
-     * @var string
-     */
-    var $_model = '';
-
-    /**
-     * device ID like 'TS21'
-     * @var string
-     */
-    var $_deviceID = '';
-
-    /**
      * server string like 'UP.Link/3.2.1.2'
      * @var string
      */
@@ -140,7 +128,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
      */
     function isTUKa()
     {
-        $tuka = substr($this->_deviceID, 2, 1);
+        $tuka = substr($this->_rawModel, 2, 1);
         if ($this->isWAP2()) {
             if ($tuka == 'U') {
                 return true;
@@ -168,7 +156,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
 
             // KDDI-TS21 UP.Browser/6.0.2.276 (GUI) MMP/1.1
             $this->_xhtmlCompliant = true;
-            list($this->_deviceID, $browser, $opt, $this->_serverName) =
+            list($this->_rawModel, $browser, $opt, $this->_serverName) =
                 explode(' ', $matches[1], 4);
             list($this->name, $version) = explode('/', $browser);
             $this->version = "$version $opt";
@@ -178,15 +166,13 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
             @list($browser, $this->_serverName, $comment) =
                 explode(' ', $userAgent, 3);
             list($this->name, $software) = explode('/', $browser);
-            list($this->version, $this->_deviceID) =
+            list($this->version, $this->_rawModel) =
                 explode('-', $software);
             if ($comment) {
                 $this->_comment =
                     preg_replace('/^\((.*)\)$/', '$1', $comment);
             }
         }
-
-        $this->_model = $this->_deviceID;
     }
 
     // }}}
@@ -218,29 +204,16 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
     }
 
     // }}}
-    // {{{ getModel()
-
-    /**
-     * returns name of the model (device ID) like 'TS21'
-     *
-     * @return string
-     */
-    function getModel()
-    {
-        return $this->_model;
-    }
-
-    // }}}
     // {{{ getDeviceID()
 
     /**
-     * returns device ID like 'TS21'
+     * Returns the device ID of the user agent.
      *
      * @return string
      */
     function getDeviceID()
     {
-        return $this->_deviceID;
+        return $this->_rawModel;
     }
 
     // }}}
@@ -318,7 +291,7 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
      */
     function isWIN()
     {
-        return substr($this->_deviceID, 2, 1) == 3 ? true : false;
+        return substr($this->_rawModel, 2, 1) == 3 ? true : false;
     }
 
     /**#@-*/

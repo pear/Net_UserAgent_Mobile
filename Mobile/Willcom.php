@@ -86,12 +86,6 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
     var $_vendor;
 
     /**
-     * model name
-     * @var string
-     */
-    var $_model;
-
-    /**
      * version number of the model
      * @var string
      */
@@ -141,7 +135,7 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
         if (preg_match('!^Mozilla/3\.0\((?:DDIPOCKET|WILLCOM);(.*)\)!',
                        $userAgent, $matches)
             ) {
-            list($this->_vendor, $this->_model, $this->_modelVersion,
+            list($this->_vendor, $this->_rawModel, $this->_modelVersion,
                  $this->_browserVersion, $cache) =
                 explode('/', $matches[1]);
             if (!preg_match('/^[Cc](\d+)/', $cache, $matches)) {
@@ -179,19 +173,6 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
     function getVendor()
     {
         return $this->_vendor;
-    }
-
-    // }}}
-    // {{{ getModel()
-
-    /**
-     * returns model name. Note that model names are separated with ','.
-     *
-     * @return string
-     */
-    function getModel()
-    {
-        return $this->_model;
     }
 
     // }}}
