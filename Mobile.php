@@ -349,11 +349,19 @@ class Net_UserAgent_Mobile
 
         if (preg_match('!^SoftBank!', $userAgent)) {
             return true;
+        } elseif (preg_match('!^Semulator!', $userAgent)) {
+            return true;
         } elseif (preg_match('!^Vodafone!', $userAgent)) {
+            return true;
+        } elseif (preg_match('!^Vemulator!', $userAgent)) {
             return true;
         } elseif (preg_match('!^MOT-!', $userAgent)) {
             return true;
+        } elseif (preg_match('!^MOTEMULATOR!', $userAgent)) {
+            return true;
         } elseif (preg_match('!^J-PHONE!', $userAgent)) {
+            return true;
+        } elseif (preg_match('!^J-EMULATOR!', $userAgent)) {
             return true;
         }
 
