@@ -1062,6 +1062,25 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function testShouldSupportYahooWebCrawler()
+    {
+        $agent = new Net_UserAgent_Mobile_DoCoMo('DoCoMo/2.0 SH902i (compatible; Y!J-SRD/1.0; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-27.html)');
+
+        $this->assertTrue($agent->isDoCoMo());
+        $this->assertEquals('SH902i', $agent->getModel());
+        $this->assertNull($agent->getStatus());
+        $this->assertNull($agent->getBandwidth());
+        $this->assertNull($agent->getSerialNumber());
+        $this->assertTrue($agent->isFOMA());
+        $this->assertNull($agent->getCardID());
+        $this->assertEquals('compatible; Y!J-SRD/1.0; http://help.yahoo.co.jp/help/jp/search/indexing/indexing-27.html',
+                            $agent->getComment()
+                            );
+        $this->assertEquals(5, $agent->getCacheSize());
+        $this->assertEquals('DoCoMo', $agent->getName());
+        $this->assertEquals('2.0', $agent->getVersion());
+    }
+
     /**#@-*/
 
     /**#@+

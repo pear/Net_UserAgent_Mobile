@@ -512,15 +512,21 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      */ 
     function _parseFOMA($foma)
     {
-        if (!preg_match('/^([^(]+)/', $foma, $matches)) {
+        if (!preg_match('/^([^(\s]+)/', $foma, $matches)) {
             return $this->noMatch();
         }
+
         $this->_rawModel = $matches[1];
         if ($this->_rawModel == 'MST_v_SH2101V') {
             $this->_model = 'SH2101V';
         }
 
-        if (preg_match('/^[^(]+\((.*?)\)$/', $foma, $matches)) {
+        if (preg_match('/^[^(\s]+\s?\((.*?)\)$/', $foma, $matches)) {
+            if (preg_match('/^compatible/', $matches[1])) { // The user-agent is DoCoMo compatible.
+                $this->_comment = $matches[1];
+                return;
+            }
+
             $rest = explode(';', $matches[1]);
             foreach ($rest as $value) {
                 if (preg_match('/^c(\d+)$/', $value, $matches)) {
