@@ -118,12 +118,12 @@ class Net_UserAgent_Mobile_Common extends PEAR
     {
         parent::PEAR('Net_UserAgent_Mobile_Error');
 
+        $this->_userAgent = $userAgent;
+
         $result = $this->parse($userAgent);
         if (Net_UserAgent_Mobile::isError($result)) {
             $this->isError($result);
         }
-
-        $this->_userAgent = $userAgent;
     }
 
     // }}}
