@@ -131,7 +131,7 @@ class Net_UserAgent_Mobile
     function &factory($userAgent = null)
     {
         if (is_null($userAgent)) {
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
+            $userAgent = @$_SERVER['HTTP_USER_AGENT'];
         }
 
         // parse User-Agent string
@@ -198,7 +198,7 @@ class Net_UserAgent_Mobile
         }
 
         if (is_null($userAgent)) {
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
+            $userAgent = @$_SERVER['HTTP_USER_AGENT'];
         }
 
         if (!array_key_exists($userAgent, $instances)) {
@@ -294,7 +294,7 @@ class Net_UserAgent_Mobile
     function isDoCoMo($userAgent = null)
     {
         if (is_null($userAgent)) {
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
+            $userAgent = @$_SERVER['HTTP_USER_AGENT'];
         }
 
         if (preg_match('!^DoCoMo!', $userAgent)) {
@@ -318,7 +318,7 @@ class Net_UserAgent_Mobile
     function isEZweb($userAgent = null)
     {
         if (is_null($userAgent)) {
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
+            $userAgent = @$_SERVER['HTTP_USER_AGENT'];
         }
 
         if (preg_match('!^KDDI-!', $userAgent)) {
@@ -344,7 +344,7 @@ class Net_UserAgent_Mobile
     function isSoftBank($userAgent = null)
     {
         if (is_null($userAgent)) {
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
+            $userAgent = @$_SERVER['HTTP_USER_AGENT'];
         }
 
         if (preg_match('!^SoftBank!', $userAgent)) {
@@ -382,7 +382,7 @@ class Net_UserAgent_Mobile
     function isWillcom($userAgent = null)
     {
         if (is_null($userAgent)) {
-            $userAgent = $_SERVER['HTTP_USER_AGENT'];
+            $userAgent = @$_SERVER['HTTP_USER_AGENT'];
         }
 
         if (preg_match('!^Mozilla/3\.0\((?:DDIPOCKET|WILLCOM);!', $userAgent)) {
