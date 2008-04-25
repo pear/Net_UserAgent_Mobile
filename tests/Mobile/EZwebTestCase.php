@@ -198,6 +198,23 @@ class Net_UserAgent_Mobile_EZwebTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheUidOfASubscriber()
+    {
+        $uid = '12345678901234_56.ezweb.ne.jp';
+        $_SERVER['HTTP_X_UP_SUBNO'] = $uid;
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertEquals($uid, $agent->getUID());
+
+        unset($_SERVER['HTTP_X_UP_SUBNO']);
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertNull($agent->getUID());
+    }
+
     /**#@-*/
 
     /**#@+

@@ -500,6 +500,17 @@ class Net_UserAgent_Mobile_Common extends PEAR
         return $this->_rawModel;
     }
 
+    // }}}
+    // {{{ getUID()
+
+    /**
+     * Gets the UID of a subscriber.
+     *
+     * @return string
+     * @since Method available since Release 1.0.0
+     */
+    function getUID() {}
+
     /**#@-*/
 
     /**#@+

@@ -1100,6 +1100,23 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
         $this->assertEquals('2.0', $agent->getVersion());
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheUidOfASubscriber()
+    {
+        $uid = '1234567';
+        $_SERVER['HTTP_X_DCMGUID'] = $uid;
+        $agent = new Net_UserAgent_Mobile_DoCoMo('DoCoMo/2.0 SH905i(c100;TB;W24H16)');
+
+        $this->assertEquals($uid, $agent->getUID());
+
+        unset($_SERVER['HTTP_X_DCMGUID']);
+        $agent = new Net_UserAgent_Mobile_DoCoMo('DoCoMo/2.0 SH905i(c100;TB;W24H16)');
+
+        $this->assertNull($agent->getUID());
+    }
+
     /**#@-*/
 
     /**#@+

@@ -448,6 +448,22 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         return 'DoCoMo';
     }
 
+    // }}}
+    // {{{ getUID()
+
+    /**
+     * Gets the UID of a subscriber.
+     *
+     * @return string
+     * @since Method available since Release 1.0.0
+     */
+    function getUID()
+    {
+        if (array_key_exists('HTTP_X_DCMGUID', $_SERVER)) {
+            return $_SERVER['HTTP_X_DCMGUID'];
+        }
+    }
+
     /**#@-*/
 
     /**#@+
