@@ -308,11 +308,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
             return $this->_cacheSize;
         }
 
-        static $defaultCacheSize;
-        if (!isset($defaultCacheSize)) {
-            $defaultCacheSize = 5;
-        }
-        return $defaultCacheSize;
+        return 5;
     }
 
     // }}}
