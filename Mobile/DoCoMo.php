@@ -22,7 +22,6 @@
 
 require_once 'Net/UserAgent/Mobile/Common.php';
 require_once 'Net/UserAgent/Mobile/Display.php';
-require_once 'Net/UserAgent/Mobile/DoCoMoDisplayMap.php';
 
 // {{{ Net_UserAgent_Mobile_DoCoMo
 
@@ -267,7 +266,9 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      */
     function makeDisplay()
     {
-        $display = Net_UserAgent_Mobile_DoCoMoDisplayMap::get($this->getModel());
+        include_once 'Net/UserAgent/Mobile/DoCoMo/ScreenInfo.php';
+        $screenInfo = &Net_UserAgent_Mobile_DoCoMo_ScreenInfo::singleton();
+        $display = $screenInfo->get($this->getModel());
         if (!is_null($this->_displayBytes)) {
             list($widthBytes, $heightBytes) = explode('*', $this->_displayBytes);
             $display['width_bytes']  = $widthBytes;
