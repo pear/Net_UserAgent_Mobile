@@ -248,7 +248,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
             if (array_key_exists('Ext-Profile', $profile)) {
                 $this->assertEquals($profile['Ext-Profile'], $javaInfo['Ext-Profile']);
             } else {
-                if (!is_null($javaInfo['Ext-Profile'])) {
+                if (array_key_exists('Ext-Profile', $javaInfo)) {
                     $this->fail($agent->getModel());
                 }
             }

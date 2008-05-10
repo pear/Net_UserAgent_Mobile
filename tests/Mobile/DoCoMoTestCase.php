@@ -1286,7 +1286,7 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
                           'DoCoMo/2.0 N2001(c10;ser0123456789abcde;icc01234567890123456789)' => array('serialNumber' => '0123456789abcde'),
                           'DoCoMo/2.0 NM850iG(c100;TB;W22H10;ser123456789012345;icc)' => array('serialNumber' => '123456789012345')
                           );
-        while (list($userAgent, $profile) = each($this->_profiles)) {
+        while (list($userAgent, $profile) = each($profiles)) {
             $agent = new Net_UserAgent_Mobile_DoCoMo($userAgent);
 
             $this->assertEquals($profile['serialNumber'], $agent->getSerialNumber());
