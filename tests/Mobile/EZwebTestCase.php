@@ -215,6 +215,104 @@ class Net_UserAgent_Mobile_EZwebTestCase extends PHPUnit_Framework_TestCase
         $this->assertNull($agent->getUID());
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheVersionOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertEquals('6.2.0.12.1.3 (GUI)', $agent->getVersion());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TST4 UP.Link/3.4.5.6');
+
+        $this->assertEquals('3.04', $agent->getVersion());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheDeviceIdOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertEquals('TS3C', $agent->getDeviceID());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TST4 UP.Link/3.4.5.6');
+
+        $this->assertEquals('TST4', $agent->getDeviceID());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheServerOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertEquals('MMP/2.0', $agent->getServer());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TST4 UP.Link/3.4.5.6');
+
+        $this->assertEquals('UP.Link/3.4.5.6', $agent->getServer());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldTellWhetherAUserAgentIsXhtmlCompliantModelOrNot()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertTrue($agent->isXHTMLCompliant());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TST4 UP.Link/3.4.5.6');
+
+        $this->assertFalse($agent->isXHTMLCompliant());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheCommentOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TS14 UP.Link/3.4.4 (Google WAP Proxy/1.0)');
+
+        $this->assertEquals('Google WAP Proxy/1.0', $agent->getComment());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertNull($agent->getComment());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldTellWhetherAUserAgentIsWap2ModelOrNot()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertTrue($agent->isWAP2());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TST4 UP.Link/3.4.5.6');
+
+        $this->assertFalse($agent->isWAP2());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldTellWhetherAUserAgentIsWap1ModelOrNot()
+    {
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS3C UP.Browser/6.2.0.12.1.3 (GUI) MMP/2.0');
+
+        $this->assertFalse($agent->isWAP1());
+
+        $agent = new Net_UserAgent_Mobile_EZweb('UP.Browser/3.04-TST4 UP.Link/3.4.5.6');
+
+        $this->assertTrue($agent->isWAP1());
+    }
+
     /**#@-*/
 
     /**#@+
