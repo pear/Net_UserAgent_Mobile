@@ -145,7 +145,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      * The model names which have GPS capability.
      *
      * @var array
-     * @since Property available since Release 1.0.0
+     * @since Property available since Release 1.0.0RC1
      */
     var $_gpsModels = array('F884i',
                             'F801i',
@@ -184,7 +184,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      * The HTML version map which maps models to HTML versions.
      *
      * @var array
-     * @since Property available since Release 1.0.0
+     * @since Property available since Release 1.0.0RC1
      */
     var $_htmlVersionMap = array('[DFNP]501i' => '1.0',
                                  '502i|821i|209i|651|691i|(F|N|P|KO)210i|^F671i$' => '2.0',
@@ -484,7 +484,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
      * Gets the UID of a subscriber.
      *
      * @return string
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     function getUID()
     {

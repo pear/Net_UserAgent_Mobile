@@ -93,7 +93,7 @@ class Net_UserAgent_Mobile_WillcomTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheVendorNameOfAUserAgent()
     {
@@ -103,7 +103,7 @@ class Net_UserAgent_Mobile_WillcomTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheModelVersionOfAUserAgent()
     {
@@ -113,7 +113,7 @@ class Net_UserAgent_Mobile_WillcomTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheBrowserVersionOfAUserAgent()
     {
@@ -123,7 +123,7 @@ class Net_UserAgent_Mobile_WillcomTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheCacheSizeOfAUserAgent()
     {

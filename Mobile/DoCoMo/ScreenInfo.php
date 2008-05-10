@@ -17,7 +17,7 @@
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    CVS: $Id$
  * @link       http://www.nttdocomo.co.jp/service/imode/make/content/spec/screen_area/index.html
- * @since      File available since Release 1.0.0
+ * @since      File available since Release 1.0.0RC1
  */
 
 // {{{ GLOBALS
@@ -37,7 +37,7 @@ $GLOBALS['NET_USERAGENT_MOBILE_DoCoMo_ScreenInfo_Instance'] = null;
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
  * @link       http://www.nttdocomo.co.jp/service/imode/make/content/spec/screen_area/index.html
- * @since      Class available since Release 1.0.0
+ * @since      Class available since Release 1.0.0RC1
  */
 class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
 {

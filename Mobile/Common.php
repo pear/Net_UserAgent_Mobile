@@ -507,7 +507,7 @@ class Net_UserAgent_Mobile_Common extends PEAR
      * Gets the UID of a subscriber.
      *
      * @return string
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     function getUID() {}
 

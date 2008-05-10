@@ -209,7 +209,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheUidOfASubscriber()
     {
@@ -226,7 +226,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheJavaInformationOfAUserAgent()
     {
@@ -256,7 +256,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldTellWhetherAUserAgentIsAModelTypeC()
     {
@@ -271,7 +271,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldTellWhetherAUserAgentIsAModelTypeP()
     {
@@ -284,7 +284,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldTellWhetherAUserAgentIsAModelTypeW()
     {
@@ -297,7 +297,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldTellWhetherAUserAgentIsAModelType3Gc()
     {
@@ -310,7 +310,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheMsnameOfAUserAgent()
     {
@@ -323,7 +323,7 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @since Method available since Release 1.0.0
+     * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheScreenInformationOfAUserAgent()
     {
