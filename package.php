@@ -42,7 +42,7 @@ Enhancements
 
 - Added support for DeNA\'s Web Crawler. (Request #13130) (Net_UserAgent_Mobile_DoCoMo)
 - Added support for getting subscriber IDs (UIDs) by getUID().
-- Added support for NM705i, L705iX, F883iESS, SH705i, SH705i2, SO905iCS, F905iBiz, P905iTV, P705i, N705imyu, P705imyu, SO705i, P705iCL, F884i. (Net_UserAgent_Mobile_DoCoMo, Net_UserAgent_Mobile_DoCoMoDisplayMap)
+- Added support for NM705i, L705iX, F883iESS, SH705i, SH705i2, SO905iCS, F905iBiz, P905iTV, P705i, N705imyu, P705imyu, SO705i, P705iCL, F884i. (Net_UserAgent_Mobile_DoCoMo, Net_UserAgent_Mobile_DoCoMo_ScreenInfo)
 
 Defect Fixes
 ============
