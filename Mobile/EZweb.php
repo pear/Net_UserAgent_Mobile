@@ -18,7 +18,6 @@
  * @version    CVS: $Id$
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/4_4.html
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/new_win/ezkishu.html
- * @see        Net_UserAgent_Mobile_Common
  * @since      File available since Release 0.1.0
  */
 
@@ -30,9 +29,8 @@ require_once 'Net/UserAgent/Mobile/Display.php';
 /**
  * EZweb implementation
  *
- * Net_UserAgent_Mobile_EZweb is a subclass of
- * {@link Net_UserAgent_Mobile_Common}, which implements EZweb (WAP1.0/2.0)
- * user agents.
+ * Net_UserAgent_Mobile_EZweb is a subclass of {@link Net_UserAgent_Mobile_Common},
+ * which implements EZweb (WAP1.0/2.0) user agents.
  *
  * SYNOPSIS:
  * <code>
@@ -63,7 +61,6 @@ require_once 'Net/UserAgent/Mobile/Display.php';
  * @version    Release: @package_version@
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/4_4.html
  * @link       http://www.au.kddi.com/ezfactory/tec/spec/new_win/ezkishu.html
- * @see        Net_UserAgent_Mobile_Common
  * @since      Class available since Release 0.1.0
  */
 class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
@@ -166,11 +163,9 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
             @list($browser, $this->_serverName, $comment) =
                 explode(' ', $userAgent, 3);
             list($this->name, $software) = explode('/', $browser);
-            list($this->version, $this->_rawModel) =
-                explode('-', $software);
+            list($this->version, $this->_rawModel) = explode('-', $software);
             if ($comment) {
-                $this->_comment =
-                    preg_replace('/^\((.*)\)$/', '$1', $comment);
+                $this->_comment = preg_replace('/^\((.*)\)$/', '$1', $comment);
             }
         }
     }
@@ -181,25 +176,19 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
     /**
      * create a new {@link Net_UserAgent_Mobile_Display} class instance
      *
-     * @return object a newly created {@link Net_UserAgent_Mobile_Display}
-     *     object
-     * @see Net_UserAgent_Mobile_Display
+     * @return Net_UserAgent_Mobile_Display
      */
     function makeDisplay()
     {
         @list($width, $height) =
             explode(',', $this->getHeader('X-UP-DEVCAP-SCREENPIXELS'));
-        $screenDepth =
-            explode(',', $this->getHeader('X-UP-DEVCAP-SCREENDEPTH'));
+        $screenDepth = explode(',', $this->getHeader('X-UP-DEVCAP-SCREENDEPTH'));
         $depth = $screenDepth[0] ? pow(2, (integer)$screenDepth[0]) : 0;
-        $color =
-            $this->getHeader('X-UP-DEVCAP-ISCOLOR') === '1' ? true : false;
-        return new Net_UserAgent_Mobile_Display(array(
-                                                      'width'  => $width,
+        $color = $this->getHeader('X-UP-DEVCAP-ISCOLOR') === '1' ? true : false;
+        return new Net_UserAgent_Mobile_Display(array('width'  => $width,
                                                       'height' => $height,
                                                       'color'  => $color,
-                                                      'depth'  => $depth
-                                                      )
+                                                      'depth'  => $depth)
                                                 );
     }
 

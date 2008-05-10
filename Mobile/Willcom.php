@@ -28,9 +28,8 @@ require_once 'Net/UserAgent/Mobile/Display.php';
 /**
  * AirH"PHONE implementation
  *
- * Net_UserAgent_Mobile_Willcom is a subclass of
- * {@link Net_UserAgent_Mobile_Common}, which implements Willcom's user
- * agents.
+ * Net_UserAgent_Mobile_Willcom is a subclass of {@link Net_UserAgent_Mobile_Common},
+ * which implements Willcom's user agents.
  *
  * SYNOPSIS:
  * <code>
@@ -55,7 +54,6 @@ require_once 'Net/UserAgent/Mobile/Display.php';
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
  * @link       http://www.willcom-inc.com/ja/service/contents_service/club_air_edge/for_phone/homepage/index.html
- * @see        Net_UserAgent_Mobile_Common
  * @since      Class available since Release 0.5
  */
 class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
@@ -153,9 +151,7 @@ class Net_UserAgent_Mobile_Willcom extends Net_UserAgent_Mobile_Common
     /**
      * create a new {@link Net_UserAgent_Mobile_Display} class instance
      *
-     * @return object a newly created {@link Net_UserAgent_Mobile_Display}
-     *     object
-     * @see Net_UserAgent_Mobile_Display
+     * @return Net_UserAgent_Mobile_Display
      */
     function makeDisplay()
     {

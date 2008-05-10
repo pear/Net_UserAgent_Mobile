@@ -162,7 +162,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
      * Parses HTTP_USER_AGENT string.
      *
      * @param string $userAgent User-Agent string
-     * @return mixed void, or a PEAR error object on error
+     * @throws Net_UserAgent_Mobile_Error
      */
     function parse($userAgent)
     {
@@ -206,8 +206,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
     /**
      * create a new {@link Net_UserAgent_Mobile_Display} class instance
      *
-     * @return object a newly created {@link Net_UserAgent_Mobile_Display} object
-     * @see Net_UserAgent_Mobile_Display
+     * @return Net_UserAgent_Mobile_Display
      */
     function makeDisplay() 
     {
@@ -444,7 +443,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
      * parse HTTP_USER_AGENT string for the Vodafone 3G aegnt
      *
      * @param array $agent parts of the User-Agent string
-     * @return mixed void, or a PEAR error object on error
+     * @throws Net_UserAgent_Mobile_Error
      */
     function _parseVodafone($agent)
     {
@@ -483,7 +482,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
      * parse HTTP_USER_AGENT string for the ancient agent
      *
      * @param array $agent parts of the User-Agent string
-     * @return mixed void, or a PEAR error object on error
+     * @throws Net_UserAgent_Mobile_Error
      */
     function _parseJphone($agent)
     {
@@ -539,7 +538,6 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
      * parse HTTP_USER_AGENT string for the Motorola 3G aegnt
      *
      * @param array $agent parts of the User-Agent string
-     * @return mixed void, or a PEAR error object on error
      */
     function _parseMotorola($agent)
     {

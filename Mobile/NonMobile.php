@@ -16,7 +16,6 @@
  * @copyright  2003-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    CVS: $Id$
- * @see        Net_UserAgent_Mobile_Common
  * @since      File available since Release 0.1.0
  */
 
@@ -29,8 +28,8 @@ require_once 'Net/UserAgent/Mobile/Display.php';
  * Non-Mobile Agent implementation
  *
  * Net_UserAgent_Mobile_NonMobile is a subclass of
- * {@link Net_UserAgent_Mobile_Common}, which implements non-mobile or
- * unimplemented user agents.
+ * {@link Net_UserAgent_Mobile_Common}, which implements non-mobile or unimplemented
+ * user agents.
  *
  * SYNOPSIS:
  * <code>
@@ -46,7 +45,6 @@ require_once 'Net/UserAgent/Mobile/Display.php';
  * @copyright  2003-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
- * @see        Net_UserAgent_Mobile_Common
  * @since      Class available since Release 0.1.0
  */
 class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
@@ -102,9 +100,7 @@ class Net_UserAgent_Mobile_NonMobile extends Net_UserAgent_Mobile_Common
     /**
      * create a new {@link Net_UserAgent_Mobile_Display} class instance
      *
-     * @return object a newly created {@link Net_UserAgent_Mobile_Display}
-     *     object
-     * @see Net_UserAgent_Mobile_Display
+     * @return Net_UserAgent_Mobile_Display
      */
     function makeDisplay()
     {
