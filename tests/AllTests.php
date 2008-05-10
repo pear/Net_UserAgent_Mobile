@@ -25,7 +25,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
 
 require_once 'PHPUnit/Framework/TestSuite.php';
 require_once 'PHPUnit/TextUI/TestRunner.php';
-require_once 'System.php';
 
 chdir(dirname(__FILE__) . '/..');
 
