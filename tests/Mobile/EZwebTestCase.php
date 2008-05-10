@@ -313,6 +313,29 @@ class Net_UserAgent_Mobile_EZwebTestCase extends PHPUnit_Framework_TestCase
         $this->assertTrue($agent->isWAP1());
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheScreenInformationOfAUserAgent()
+    {
+        $_SERVER['HTTP_X_UP_DEVCAP_SCREENPIXELS'] = '90,70';
+        $_SERVER['HTTP_X_UP_DEVCAP_SCREENDEPTH'] = '16,RGB565';
+        $_SERVER['HTTP_X_UP_DEVCAP_ISCOLOR'] = '1';
+
+        $agent = new Net_UserAgent_Mobile_EZweb('KDDI-TS21 UP.Browser/6.0.2.276 (GUI) MMP/1.1');
+
+        $display = $agent->getDisplay();
+
+        $this->assertEquals(90, $display->getWidth());
+        $this->assertEquals(70, $display->getHeight());
+        $this->assertTrue($display->isColor());
+        $this->assertEquals(65536, $display->getDepth());
+
+        unset($_SERVER['HTTP_X_UP_DEVCAP_ISCOLOR']);
+        unset($_SERVER['HTTP_X_UP_DEVCAP_SCREENDEPTH']);
+        unset($_SERVER['HTTP_X_UP_DEVCAP_SCREENPIXELS']);
+    }
+
     /**#@-*/
 
     /**#@+

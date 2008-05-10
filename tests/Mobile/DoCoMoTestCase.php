@@ -1338,6 +1338,22 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheScreenInformationOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_DoCoMo('DoCoMo/2.0 P705iCL(c100;TB;W16H10)');
+        $display = $agent->getDisplay();
+
+        $this->assertEquals(240, $display->getWidth());
+        $this->assertEquals(350, $display->getHeight());
+        $this->assertTrue($display->isColor());
+        $this->assertEquals(262144, $display->getDepth());
+        $this->assertEquals(16, $display->getWidthBytes());
+        $this->assertEquals(10, $display->getHeightBytes());
+    }
+
     /**#@-*/
 
     /**#@+

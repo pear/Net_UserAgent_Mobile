@@ -322,6 +322,26 @@ class Net_UserAgent_Mobile_SoftBankTestCase extends PHPUnit_Framework_TestCase
         unset($_SERVER['HTTP_X_JPHONE_MSNAME']);
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheScreenInformationOfAUserAgent()
+    {
+        $_SERVER['HTTP_X_JPHONE_DISPLAY'] = '120*117';
+        $_SERVER['HTTP_X_JPHONE_COLOR'] = 'C256';
+        $agent = new Net_UserAgent_Mobile_SoftBank('J-PHONE/2.0/J-DN02');
+
+        $display = $agent->getDisplay();
+
+        $this->assertEquals(120, $display->getWidth());
+        $this->assertEquals(117, $display->getHeight());
+        $this->assertTrue($display->isColor());
+        $this->assertEquals(256, $display->getDepth());
+
+        unset($_SERVER['HTTP_X_JPHONE_COLOR']);
+        unset($_SERVER['HTTP_X_JPHONE_DISPLAY']);
+    }
+
     /**#@-*/
 
     /**#@+
