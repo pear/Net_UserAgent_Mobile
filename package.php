@@ -87,7 +87,7 @@ $package->addInstallAs('Mobile.php', 'Net/UserAgent/Mobile.php');
 $package->addInstallAs('Mobile/Common.php', 'Net/UserAgent/Mobile/Common.php');
 $package->addInstallAs('Mobile/Display.php', 'Net/UserAgent/Mobile/Display.php');
 $package->addInstallAs('Mobile/DoCoMo.php', 'Net/UserAgent/Mobile/DoCoMo.php');
-$package->addInstallAs('Mobile/DoCoMoDisplayMap.php', 'Net/UserAgent/Mobile/DoCoMoDisplayMap.php');
+$package->addInstallAs('Mobile/DoCoMo/ScreenInfo.php', 'Net/UserAgent/Mobile/DoCoMo/ScreenInfo.php');
 $package->addInstallAs('Mobile/EZweb.php', 'Net/UserAgent/Mobile/EZweb.php');
 $package->addInstallAs('Mobile/NonMobile.php', 'Net/UserAgent/Mobile/NonMobile.php');
 $package->addInstallAs('Mobile/SoftBank.php', 'Net/UserAgent/Mobile/SoftBank.php');
