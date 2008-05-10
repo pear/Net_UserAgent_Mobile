@@ -92,6 +92,46 @@ class Net_UserAgent_Mobile_WillcomTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheVendorNameOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_Willcom('Mozilla/3.0(WILLCOM;SANYO/WX310SA/2;1/1/C128) NetFront/3.3,61.198.142.127');
+
+        $this->assertEquals('SANYO', $agent->getVendor());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheModelVersionOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_Willcom('Mozilla/3.0(WILLCOM;SANYO/WX310SA/2;1/1/C128) NetFront/3.3,61.198.142.127');
+
+        $this->assertEquals('2;1', $agent->getModelVersion());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheBrowserVersionOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_Willcom('Mozilla/3.0(WILLCOM;SANYO/WX310SA/2;1/1/C128) NetFront/3.3,61.198.142.127');
+
+        $this->assertEquals('1', $agent->getBrowserVersion());
+    }
+
+    /**
+     * @since Method available since Release 1.0.0
+     */
+    public function testShouldProvideTheCacheSizeOfAUserAgent()
+    {
+        $agent = new Net_UserAgent_Mobile_Willcom('Mozilla/3.0(WILLCOM;SANYO/WX310SA/2;1/1/C128) NetFront/3.3,61.198.142.127');
+
+        $this->assertEquals(128, $agent->getCacheSize());
+    }
+
     /**#@-*/
 
     /**#@+
