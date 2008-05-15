@@ -153,17 +153,17 @@ class Net_UserAgent_Mobile_EZweb extends Net_UserAgent_Mobile_Common
 
             // KDDI-TS21 UP.Browser/6.0.2.276 (GUI) MMP/1.1
             $this->_xhtmlCompliant = true;
-            list($this->_rawModel, $browser, $opt, $this->_serverName) =
+            @list($this->_rawModel, $browser, $opt, $this->_serverName) =
                 explode(' ', $matches[1], 4);
-            list($this->name, $version) = explode('/', $browser);
+            @list($this->name, $version) = explode('/', $browser);
             $this->version = "$version $opt";
         } else {
 
             // UP.Browser/3.01-HI01 UP.Link/3.4.5.2
             @list($browser, $this->_serverName, $comment) =
                 explode(' ', $userAgent, 3);
-            list($this->name, $software) = explode('/', $browser);
-            list($this->version, $this->_rawModel) = explode('-', $software);
+            @list($this->name, $software) = explode('/', $browser);
+            @list($this->version, $this->_rawModel) = explode('-', $software);
             if ($comment) {
                 $this->_comment = preg_replace('/^\((.*)\)$/', '$1', $comment);
             }

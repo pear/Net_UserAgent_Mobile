@@ -239,7 +239,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
 
             // DoCoMo/2.0 N2001(c10;ser0123456789abcde;icc01234567890123456789)
             $this->_isFOMA = true;
-            list($this->name, $this->version) = explode('/', $main);
+            @list($this->name, $this->version) = explode('/', $main);
             $result = $this->_parseFOMA($foma_or_comment);
         } else {
 
@@ -266,7 +266,7 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         $screenInfo = &Net_UserAgent_Mobile_DoCoMo_ScreenInfo::singleton();
         $display = $screenInfo->get($this->getModel());
         if (!is_null($this->_displayBytes)) {
-            list($widthBytes, $heightBytes) = explode('*', $this->_displayBytes);
+            @list($widthBytes, $heightBytes) = explode('*', $this->_displayBytes);
             $display['width_bytes']  = $widthBytes;
             $display['height_bytes'] = $heightBytes;
         }

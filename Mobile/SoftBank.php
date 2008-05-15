@@ -470,7 +470,7 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
         $this->_vendorVersion = $matches[2];
 
         for ($i = 2, $count = count($agent); $i < $count; ++$i) {
-            list($key, $value) = explode('/', $agent[$i]);
+            @list($key, $value) = explode('/', $agent[$i]);
             $this->_javaInfo[$key] = $value;
         }
     }
@@ -503,9 +503,9 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
                 $this->_serialNumber = $matches[1];
             }
 
-            list($this->_vendor, $this->_vendorVersion) = explode('/', $agent[1]);
+            @list($this->_vendor, $this->_vendorVersion) = explode('/', $agent[1]);
             for ($i = 2; $i < $count; ++$i) {
-                list($key, $value) = explode('/', $agent[$i]);
+                @list($key, $value) = explode('/', $agent[$i]);
                 $this->_javaInfo[$key] = $value;
             }
         } else {
@@ -545,11 +545,11 @@ class Net_UserAgent_Mobile_SoftBank extends Net_UserAgent_Mobile_Common
         $this->_vendor = 'MOT';
 
         // MOT-V980/80.2F.2E. MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1
-        list($this->_rawModel, $this->_vendorVersion) = explode('/', $agent[0]);
+        @list($this->_rawModel, $this->_vendorVersion) = explode('/', $agent[0]);
         $this->_model = substr(strrchr($this->_rawModel, '-'), 1);
 
         for ($i = 2, $count = count($agent); $i < $count; ++$i) {
-            list($key, $value) = explode('/', $agent[$i]);
+            @list($key, $value) = explode('/', $agent[$i]);
             $this->_javaInfo[$key] = $value;
         }
     }
