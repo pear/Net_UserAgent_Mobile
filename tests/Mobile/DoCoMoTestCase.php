@@ -1092,6 +1092,11 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
      * @access public
      */
 
+    public function setUp()
+    {
+        $GLOBALS['NET_USERAGENT_MOBILE_DoCoMo_ScreenInfo_Instance'] = null;
+    }
+
     public function testShouldDetectUserAgentsAsDocomo()
     {
         reset($this->_profiles);
