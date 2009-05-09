@@ -121,58 +121,41 @@ class Net_UserAgent_Mobile_Common extends PEAR
 
         $result = $this->parse($userAgent);
         if (Net_UserAgent_Mobile::isError($result)) {
-            $this->isError($result);
+            $this->setError($result);
         }
     }
 
     // }}}
-    // {{{ isError
+    // {{{ setError
 
     /**
-     * Returns/set an error when the instance couldn't initialize properly
+     * Sets a Net_UserAgent_Mobile_Error object. This method is used only if parse error is raised in the constructor.
+     *
+     * @param Net_UserAgent_Mobile_Error
+     * @return Net_UserAgent_Mobile_Error
+     */
+    function setError(&$error)
+    {
+        $this->_error = &$error;
+    }
+
+    // }}}
+    // {{{ getError
+
+    /**
+     * Gets a Net_UserAgent_Mobile_Error object.
      *
      * @param object {@link Net_UserAgent_Mobile_Error} object when setting an error
      * @return Net_UserAgent_Mobile_Error
      */
-    function &isError($error = null)
+    function &getError()
     {
-        if ($error !== null) {
-            $this->_error = &$error;
+        if (is_null($this->_error)) {
+            $return = null;
+            return $return;
         }
 
         return $this->_error;
-    }
-
-    // }}}
-    // {{{ raiseError()
-
-    /**
-     * This method is used to communicate an error and invoke error callbacks etc.
-     * Basically a wrapper for PEAR::raiseError without the message string.
-     *
-     * @param mixed    $code     integer error code, or a PEAR error object (all other
-     *     parameters are ignored if this parameter is an object
-     * @param intteger $mode     error mode, see PEAR_Error docs
-     * @param mixed    $options  If error mode is PEAR_ERROR_TRIGGER, this is
-     *     the error level (E_USER_NOTICE etc). If error mode is PEAR_ERROR_CALLBACK,
-     *     this is the callback function, either as a function name, or as an array of
-     *     an object and method name. For other error modes this parameter is ignored.
-     * @param string   $userinfo Extra debug information
-     * @throws Net_UserAgent_Mobile_Error
-     */
-    function &raiseError($code = NET_USERAGENT_MOBILE_ERROR, $mode = null,
-                         $options = null, $userinfo = null
-                         )
-    {
-
-        // The error is yet a Net_UserAgent_Mobile error object
-        if (is_object($code)) {
-            return PEAR::raiseError($code, null, null, null, null, null, true);
-        }
-
-        return PEAR::raiseError(null, $code, $mode, $options, $userinfo,
-                                'Net_UserAgent_Mobile_Error', true
-                                );
     }
 
     // }}}
@@ -255,9 +238,8 @@ class Net_UserAgent_Mobile_Common extends PEAR
      */
     function noMatch()
     {
-        return $this->raiseError(NET_USERAGENT_MOBILE_ERROR_NOMATCH, null,
-                                 null, $this->getUserAgent() .
-                                 ': might be new variants. Please contact the author of Net_UserAgent_Mobile!'
+        return $this->raiseError($this->getUserAgent() . ': might be new variants. Please contact the author of Net_UserAgent_Mobile!',
+                                 NET_USERAGENT_MOBILE_ERROR_NOMATCH
                                  );
     }
 

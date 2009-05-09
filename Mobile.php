@@ -159,8 +159,8 @@ class Net_UserAgent_Mobile
             }
         }
 
-        $instance = &new $class($userAgent);
-        $error = &$instance->isError();
+        $instance = new $class($userAgent);
+        $error = &$instance->getError();
         if (Net_UserAgent_Mobile::isError($error)) {
             if ($GLOBALS['NET_USERAGENT_MOBILE_FallbackOnNomatch']
                 && $error->getCode() == NET_USERAGENT_MOBILE_ERROR_NOMATCH
