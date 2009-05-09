@@ -62,6 +62,11 @@ class Net_UserAgent_MobileTestCase extends PHPUnit_Framework_TestCase
      * @access public
      */
 
+    public function setUp()
+    {
+        PEAR::staticPushErrorHandling(PEAR_ERROR_TRIGGER);
+    }
+
     public function testShouldCreateAnObjectByAGivenUserAgentString()
     {
         $this->assertType('Net_UserAgent_Mobile_DoCoMo',
@@ -109,7 +114,9 @@ class Net_UserAgent_MobileTestCase extends PHPUnit_Framework_TestCase
     public function testShouldSupportFallbackOnNoMatch()
     {
         $ua = 'DoCoMo/1.0/SO504i/abc/TB';
+        PEAR::staticPushErrorHandling(PEAR_ERROR_RETURN);
         $agent = Net_UserAgent_Mobile::factory($ua);
+        PEAR::staticPopErrorHandling();
 
         $this->assertTrue(Net_UserAgent_Mobile::isError($agent));
         $this->assertEquals(NET_USERAGENT_MOBILE_ERROR_NOMATCH,
