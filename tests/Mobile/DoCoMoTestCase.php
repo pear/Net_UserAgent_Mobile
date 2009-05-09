@@ -1182,6 +1182,28 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @since Method available since Release 1.0.0RC2
+     */
+    public function testShouldSupportGoogleMobileWebCrawler()
+    {
+        $agent = new Net_UserAgent_Mobile_DoCoMo('DoCoMo/2.0 N902iS(c100;TB;W24H12)(compatible; moba-crawler; http://crawler.dena.jp/)');
+
+        $this->assertTrue($agent->isDoCoMo());
+        $this->assertEquals('N902iS', $agent->getModel());
+        $this->assertEquals('TB', $agent->getStatus());
+        $this->assertNull($agent->getBandwidth());
+        $this->assertNull($agent->getSerialNumber());
+        $this->assertTrue($agent->isFOMA());
+        $this->assertNull($agent->getCardID());
+        $this->assertEquals('compatible; moba-crawler; http://crawler.dena.jp/',
+                            $agent->getComment()
+                            );
+        $this->assertEquals(100, $agent->getCacheSize());
+        $this->assertEquals('DoCoMo', $agent->getName());
+        $this->assertEquals('2.0', $agent->getVersion());
+    }
+
+    /**
      * @since Method available since Release 1.0.0RC1
      */
     public function testShouldProvideTheUidOfASubscriber()
