@@ -19,7 +19,7 @@
  * @since      File available since Release 0.31.0
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
+require_once dirname(__FILE__) . '/AbstractTestCase.php';
 require_once 'Net/UserAgent/Mobile/Willcom.php';
 
 // {{{ Net_UserAgent_Mobile_WillcomTestCase
@@ -35,7 +35,7 @@ require_once 'Net/UserAgent/Mobile/Willcom.php';
  * @version    Release: @package_version@
  * @since      Class available since Release 0.31.0
  */
-class Net_UserAgent_Mobile_WillcomTestCase extends PHPUnit_Framework_TestCase
+class Net_UserAgent_Mobile_WillcomTestCase extends Net_UserAgent_Mobile_AbstractTestCase
 {
 
     // {{{ properties
