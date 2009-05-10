@@ -621,6 +621,12 @@ class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
                                          'depth'  => 16777216,
                                          'color'  => 1
                                          ),
+                       'NM706I' => array(
+                                         'width'  => 231,
+                                         'height' => 235,
+                                         'depth'  => 16777216,
+                                         'color'  => 1
+                                         ),
 
                        // i-mode compliant HTML 5.0 (505i etc.)
                        'D505I' => array(
@@ -1302,6 +1308,12 @@ class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
                                         'depth'  => 65536,
                                         'color'  => 1
                                         ),
+                       'F883IS' => array(
+                                         'width'  => 240,
+                                         'height' => 256,
+                                         'depth'  => 65536,
+                                         'color'  => 1
+                                         ),
                        'P704IMYU' => array(
                                            'width'  => 240,
                                            'height' => 270,
@@ -1326,6 +1338,30 @@ class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
                                          'depth'  => 262144,
                                          'color'  => 1
                                          ),
+                       'L852I' => array(
+                                        'width'  => 240,
+                                        'height' => 298,
+                                        'depth'  => 65536,
+                                        'color'  => 1
+                                        ),
+                       'L706IE' => array(
+                                         'width'  => 240,
+                                         'height' => 280,
+                                         'depth'  => 262144,
+                                         'color'  => 1
+                                         ),
+                       'L01A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'L03A' => array(
+                                       'width'  => 240,
+                                       'height' => 280,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
 
                        // i-mode compliant HTML 7.0
                        // (FOMA 903i etc.)
@@ -1569,6 +1605,18 @@ class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
                                           'depth'  => 262144,
                                           'color'  => 1
                                           ),
+                       'SH706IE' => array(
+                                          'width'  => 240,
+                                          'height' => 320,
+                                          'depth'  => 262144,
+                                          'color'  => 1
+                                          ),
+                       'F05A' => array(
+                                       'width'  => 240,
+                                       'height' => 352,
+                                       'depth'  => 65536,
+                                       'color'  => 1
+                                       ),
  
                        // i-mode compliant HTML 7.1
                        // (FOMA 905i etc.)
@@ -1685,7 +1733,244 @@ class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
                                         'height' => 364,
                                         'depth'  => 262144,
                                         'color'  => 1
-                                        )
+                                        ),
+                       'F884IES' => array(
+                                          'width'  => 240,
+                                          'height' => 282,
+                                          'depth'  => 262144,
+                                          'color'  => 1
+                                          ),
+                       'N906IL' => array(
+                                         'width'  => 240,
+                                         'height' => 320,
+                                         'depth'  => 262144,
+                                         'color'  => 1
+                                         ),
+                       'N706I' => array(
+                                        'width'  => 240,
+                                        'height' => 320,
+                                        'depth'  => 262144,
+                                        'color'  => 1
+                                        ),
+                       'SO706I' => array(
+                                         'width'  => 240,
+                                         'height' => 320,
+                                         'depth'  => 262144,
+                                         'color'  => 1
+                                         ),
+                       'P706IMYU' => array(
+                                           'width'  => 240,
+                                           'height' => 350,
+                                           'depth'  => 262144,
+                                           'color'  => 1
+                                           ),
+                       'N706IE' => array(
+                                         'width'  => 240,
+                                         'height' => 320,
+                                         'depth'  => 262144,
+                                         'color'  => 1
+                                         ),
+                       'N706I2' => array(
+                                         'width'  => 240,
+                                         'height' => 320,
+                                         'depth'  => 262144,
+                                         'color'  => 1
+                                         ),
+                       'N03A' => array(
+                                       'width'  => 240,
+                                       'height' => 320,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'N05A' => array(
+                                       'width'  => 240,
+                                       'height' => 320,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'F07A' => array(
+                                       'width'  => 240,
+                                       'height' => 256,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+
+                       // i-mode compliant HTML 7.2
+                       // (FOMA 906i etc.)
+                       'P906I' => array(
+                                        'width'  => 240,
+                                        'height' => 350,
+                                        'depth'  => 262144,
+                                        'color'  => 1
+                                        ),
+                       'SO906I' => array(
+                                         'width'  => 240,
+                                         'height' => 368,
+                                         'depth'  => 16777216,
+                                         'color'  => 1
+                                         ),
+                       'SH906I' => array(
+                                         'width'  => 240,
+                                         'height' => 320,
+                                         'depth'  => 16777216,
+                                         'color'  => 1
+                                         ),
+                       'N906IMYU' => array(
+                                           'width'  => 240,
+                                           'height' => 320,
+                                           'depth'  => 262144,
+                                           'color'  => 1
+                                           ),
+                       'F906I' => array(
+                                        'width'  => 240,
+                                        'height' => 352,
+                                        'depth'  => 16777216,
+                                        'color'  => 1
+                                        ),
+                       'N906I' => array(
+                                        'width'  => 240,
+                                        'height' => 320,
+                                        'depth'  => 262144,
+                                        'color'  => 1
+                                        ),
+                       'SH906ITV' => array(
+                                           'width'  => 240,
+                                           'height' => 320,
+                                           'depth'  => 16777216,
+                                           'color'  => 1
+                                           ),
+                       'F706I' => array(
+                                        'width'  => 240,
+                                        'height' => 352,
+                                        'depth'  => 262144,
+                                        'color'  => 1
+                                        ),
+                       'SH706I' => array(
+                                         'width'  => 240,
+                                         'height' => 320,
+                                         'depth'  => 16777216,
+                                         'color'  => 1
+                                         ),
+                       'P706IE' => array(
+                                         'width'  => 240,
+                                         'height' => 350,
+                                         'depth'  => 262144,
+                                         'color'  => 1
+                                         ),
+                       'SH706IW' => array(
+                                          'width'  => 240,
+                                          'height' => 320,
+                                          'depth'  => 16777216,
+                                          'color'  => 1
+                                          ),
+                       'F01A' => array(
+                                       'width'  => 240,
+                                       'height' => 352,
+                                       'depth'  => 16777216,
+                                       'color'  => 1
+                                       ),
+                       'F02A' => array(
+                                       'width'  => 240,
+                                       'height' => 352,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'F03A' => array(
+                                       'width'  => 240,
+                                       'height' => 352,
+                                       'depth'  => 16777216,
+                                       'color'  => 1
+                                       ),
+                       'F04A' => array(
+                                       'width'  => 240,
+                                       'height' => 352,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'F06A' => array(
+                                       'width'  => 240,
+                                       'height' => 352,
+                                       'depth'  => 16777216,
+                                       'color'  => 1
+                                       ), 
+                       'P01A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'P02A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'P03A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'P04A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'P05A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'P06A' => array(
+                                       'width'  => 240,
+                                       'height' => 350,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'SH01A' => array(
+                                        'width'  => 240,
+                                        'height' => 320,
+                                        'depth'  => 16777216,
+                                        'color'  => 1
+                                        ),
+                       'SH02A' => array(
+                                        'width'  => 240,
+                                        'height' => 320,
+                                        'depth'  => 16777216,
+                                        'color'  => 1
+                                        ),
+                       'SH03A' => array(
+                                        'width'  => 240,
+                                        'height' => 320,
+                                        'depth'  => 16777216,
+                                        'color'  => 1
+                                        ),
+                       'SH04A' => array(
+                                        'width'  => 240,
+                                        'height' => 320,
+                                        'depth'  => 16777216,
+                                        'color'  => 1
+                                        ),
+                       'N01A' => array(
+                                       'width'  => 240,
+                                       'height' => 320,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'N02A' => array(
+                                       'width'  => 240,
+                                       'height' => 320,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'N04A' => array(
+                                       'width'  => 240,
+                                       'height' => 320,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       )
                        );
 
     /**#@-*/
