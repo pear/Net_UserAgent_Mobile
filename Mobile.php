@@ -189,7 +189,7 @@ class Net_UserAgent_Mobile
                 return $instance;
             }
 
-            return $instance->raiseError($error);
+            return PEAR::raiseError($error);
         }
 
         return $instance;
