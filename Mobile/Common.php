@@ -37,7 +37,7 @@
  * @since      File available since Release 0.1
  */
 
-require_once 'Net/UserAgent/Mobile.php';
+require_once 'Net/UserAgent/Mobile/Error.php';
 require_once 'PEAR.php';
 
 // {{{ Net_UserAgent_Mobile_Common
@@ -137,7 +137,7 @@ class Net_UserAgent_Mobile_Common
         $this->_userAgent = $userAgent;
 
         $result = $this->parse($userAgent);
-        if (Net_UserAgent_Mobile::isError($result)) {
+        if (PEAR::isError($result)) {
             $this->_error = &$result;
         }
     }

@@ -37,19 +37,9 @@
  * @since      File available since Release 0.1
  */
 
+require_once 'Net/UserAgent/Mobile/Error.php';
 require_once 'PEAR.php';
 
-// {{{ constants
-
-/**
- * Constants for error handling.
- */
-define('NET_USERAGENT_MOBILE_OK',               1);
-define('NET_USERAGENT_MOBILE_ERROR',           -1);
-define('NET_USERAGENT_MOBILE_ERROR_NOMATCH',   -2);
-define('NET_USERAGENT_MOBILE_ERROR_NOT_FOUND', -3);
-
-// }}}
 // {{{ GLOBALS
 
 /**
@@ -415,23 +405,6 @@ class Net_UserAgent_Mobile
 
     // }}}
 }
-
-// }}}
-// {{{ Net_UserAgent_Mobile_Error
-
-/**
- * Net_UserAgent_Mobile_Error implements a class for reporting user agent error
- * messages
- *
- * @category   Networking
- * @package    Net_UserAgent_Mobile
- * @author     KUBO Atsuhiro <kubo@iteman.jp>
- * @copyright  2003-2009 KUBO Atsuhiro <kubo@iteman.jp>
- * @license    http://www.opensource.org/licenses/bsd-license.php  New BSD License
- * @version    Release: @package_version@
- * @since      Class available since Release 0.1
- */
-class Net_UserAgent_Mobile_Error extends PEAR_Error {}
 
 // }}}
 
