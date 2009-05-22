@@ -1988,6 +1988,26 @@ class Net_UserAgent_Mobile_DoCoMo_ScreenInfo
                                        'height' => 320,
                                        'depth'  => 262144,
                                        'color'  => 1
+                                       ),
+
+                       // i-mode browser 2.0
+                       'P07A' => array(
+                                       'width'  => 480,
+                                       'height' => 662,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'N06A' => array(
+                                       'width'  => 480,
+                                       'height' => 640,
+                                       'depth'  => 262144,
+                                       'color'  => 1
+                                       ),
+                       'N08A' => array(
+                                       'width'  => 480,
+                                       'height' => 640,
+                                       'depth'  => 262144,
+                                       'color'  => 1
                                        )
                        );
 
