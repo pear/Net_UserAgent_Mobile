@@ -1800,7 +1800,7 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends Net_UserAgent_Mobile_AbstractT
     /**
      * @since Method available since Release 1.0.0RC1
      */
-    public function testShouldUseAnExternalScreenInformationIfTheEnvironmentVariableIsGiven1()
+    public function testShouldUseAnExternalScreenInformationIfTheEnvironmentVariableIsGiven()
     {
         $_SERVER['DOCOMO_MAP'] = dirname(__FILE__) . '/' . basename(__FILE__, '.php') . '/docomo-screen.xml';
         $agent = new Net_UserAgent_Mobile_DoCoMo('DoCoMo/2.0 P705iCL(c100;TB;W16H10)');
