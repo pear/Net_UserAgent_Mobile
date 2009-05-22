@@ -41,6 +41,7 @@
 
 require_once 'Net/UserAgent/Mobile/Common.php';
 require_once 'Net/UserAgent/Mobile/Display.php';
+require_once 'Net/UserAgent/Mobile.php';
 
 // {{{ Net_UserAgent_Mobile_DoCoMo
 
