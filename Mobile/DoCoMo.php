@@ -832,6 +832,20 @@ class Net_UserAgent_Mobile_DoCoMo extends Net_UserAgent_Mobile_Common
         }
     }
 
+    // }}}
+    // {{{ getBrowserVersion()
+
+    /**
+     * Gets the i-mode browser version.
+     *
+     * @return string
+     * @since Method available since Release 1.0.0RC3
+     */
+    function getBrowserVersion()
+    {
+        return $this->getCacheSize() == 500 ? '2.0' : '1.0';
+    }
+
     /**#@-*/
 
     /**#@+

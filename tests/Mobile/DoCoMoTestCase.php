@@ -1812,6 +1812,27 @@ class Net_UserAgent_Mobile_DoCoMoTestCase extends Net_UserAgent_Mobile_AbstractT
         $this->assertEquals(999, $display->getDepth());
     }
 
+    /**
+     * @since Method available since Release 1.0.0RC3
+     */
+    public function testShouldProvideTheBrowserVersionOfAUserAgent()
+    {
+        reset($this->_profiles);
+        while (list($userAgent, $profile) = each($this->_profiles)) {
+            $agent = new Net_UserAgent_Mobile_DoCoMo($userAgent);
+
+            if ($agent->getCacheSize() == 500) {
+                $this->assertEquals('2.0', $agent->getBrowserVersion(),
+                                    $agent->getUserAgent()
+                                    );
+            } else {
+                $this->assertEquals('1.0', $agent->getBrowserVersion(),
+                                    $agent->getUserAgent()
+                                    );
+            }
+        }
+    }
+
     /**#@-*/
 
     /**#@+
