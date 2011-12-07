@@ -37,8 +37,6 @@
  * @since      File available since Release 0.31.0
  */
 
-error_reporting(E_ALL);
-
 set_include_path(realpath(dirname(__FILE__) . '/..') . PATH_SEPARATOR .
                  get_include_path()
                  );
