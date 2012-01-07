@@ -41,11 +41,8 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Mobile_AllTests::main');
 }
 
-require_once 'PHPUnit/Framework/TestSuite.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
+require_once 'PHPUnit/Autoload.php';
 require_once 'System.php';
-
-chdir(dirname(__FILE__) . '/../..');
 
 require_once dirname(__FILE__) . '/DoCoMoTestCase.php';
 require_once dirname(__FILE__) . '/EZwebTestCase.php';

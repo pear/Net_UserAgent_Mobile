@@ -37,7 +37,7 @@
  * @since      File available since Release 1.0.0RC2
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
+require_once 'PHPUnit/Autoload.php';
 
 // {{{ Net_UserAgent_Mobile_AbstractTestCase
 

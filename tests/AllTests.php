@@ -41,9 +41,7 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Net_UserAgent_Mobile_AllTests::main');
 }
 
-require_once 'PHPUnit/TextUI/TestRunner.php';
-
-chdir(dirname(__FILE__) . '/..');
+require_once 'PHPUnit/Autoload.php';
 
 require_once dirname(__FILE__) . '/MobileTestCase.php';
 require_once dirname(__FILE__) . '/Mobile/AllTests.php';
