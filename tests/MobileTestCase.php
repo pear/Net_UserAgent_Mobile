@@ -82,19 +82,19 @@ class Net_UserAgent_MobileTestCase extends Net_UserAgent_Mobile_AbstractTestCase
 
     public function testShouldCreateAnObjectByAGivenUserAgentString()
     {
-        $this->assertType('Net_UserAgent_Mobile_DoCoMo',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_DoCoMo',
                           Net_UserAgent_Mobile::factory('DoCoMo/2.0 P904i(c100;TB;W24H15)')
                           );
-        $this->assertType('Net_UserAgent_Mobile_EZweb',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_EZweb',
                           Net_UserAgent_Mobile::factory('KDDI-SA31 UP.Browser/6.2.0.7.3.129 (GUI) MMP/2.0')
                           );
-        $this->assertType('Net_UserAgent_Mobile_SoftBank',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_SoftBank',
                           Net_UserAgent_Mobile::factory('SoftBank/1.0/706SC/SCJ001 Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1')
                           );
-        $this->assertType('Net_UserAgent_Mobile_Willcom',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_Willcom',
                           Net_UserAgent_Mobile::factory('Mozilla/3.0(DDIPOCKET;JRC/AH-J3001V,AH-J3002V/1.0/0100/c50)CNF/2.0')
                           );
-        $this->assertType('Net_UserAgent_Mobile_NonMobile',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_NonMobile',
                           Net_UserAgent_Mobile::factory('Mozilla/5.0 (Windows; U; Windows NT 5.1; ja; rv:1.8.1.4) Gecko/20070515 Firefox/2.0.0.4 GoogleToolbarFF 3.0.20070525')
                           );
     }
@@ -103,7 +103,7 @@ class Net_UserAgent_MobileTestCase extends Net_UserAgent_Mobile_AbstractTestCase
     {
         $_SERVER['HTTP_USER_AGENT'] = 'DoCoMo/2.0 P904i(c100;TB;W24H15)';
 
-        $this->assertType('Net_UserAgent_Mobile_DoCoMo',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_DoCoMo',
                           Net_UserAgent_Mobile::factory()
                           );
     }
@@ -138,7 +138,7 @@ class Net_UserAgent_MobileTestCase extends Net_UserAgent_Mobile_AbstractTestCase
 
         $GLOBALS['NET_USERAGENT_MOBILE_FallbackOnNomatch'] = true;
 
-        $this->assertType('Net_UserAgent_Mobile_NonMobile',
+        $this->assertInstanceOf('Net_UserAgent_Mobile_NonMobile',
                           Net_UserAgent_Mobile::factory($ua)
                           );
     }
